@@ -44,33 +44,33 @@ auth.onAuthStateChanged(user => {
 		logoHolder.style.display = 'block';
 	}
 	if (user.displayName && user.email) {
-		jinaHolder.innerText = user.displayName;
+		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		emailInvoice.style.display = 'flex';
 		yourEmail.innerText = user.email;
 	} else if (!user.displayName && user.email) {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
-		jinaHolder.innerText = theaddress;
+		jinaHolder.value = theaddress;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		emailInvoice.style.display = 'flex';
 		yourEmail.innerText = user.email;
 	} else if(user.phoneNumber && user.displayName) {
-		jinaHolder.innerText = user.displayName;
+		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		phoneInvoice.style.display = 'flex';
 		yourPhone.innerText = user.phoneNumber;
 	} else if(user.phoneNumber && !user.displayName) {
-		jinaHolder.innerText = user.phoneNumber;
+		jinaHolder.value = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		phoneInvoice.style.display = 'flex';
 		yourPhone.innerText = user.phoneNumber;
 	} else	if (user.isAnonymous && user.displayName) {
-		jinaHolder.innerText = user.displayName;
+		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		anonInvoice.style.display = 'flex';
 	} else	if (user.isAnonymous && !user.displayName) {
-		jinaHolder.innerText = 'Anonymous';
+		jinaHolder.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		anonInvoice.style.display = 'flex';
 	}

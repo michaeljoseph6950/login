@@ -45,7 +45,7 @@ auth.onAuthStateChanged(user => {
 		thenoPic.style.display = 'inline-block';
 	}
 	if (user.displayName && user.email) {
-		jinaHolder.innerText = user.displayName;
+		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
 		text2.value = user.displayName;
@@ -68,7 +68,7 @@ auth.onAuthStateChanged(user => {
 					displayName: newDisplayName2
 				})
 				.then(() => {
-					document.getElementById('jinaHolder').innerText = displayNameField2.value;
+					jinaHolder.value = displayNameField2.value;
 					localStorage.setItem('disname',newDisplayName2);
 					alert('Display Name Updated Successfully !');
 				})
@@ -84,7 +84,7 @@ auth.onAuthStateChanged(user => {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
 
-		jinaHolder.innerText = theaddress;
+		jinaHolder.value = theaddress;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
 		text2.value = theaddress;
@@ -107,7 +107,7 @@ auth.onAuthStateChanged(user => {
 					displayName: newDisplayName2
 				})
 				.then(() => {
-					document.getElementById('jinaHolder').innerText = displayNameField2.value;
+					jinaHolder.value = displayNameField2.value;
 					localStorage.setItem('disname',newDisplayName2);
 					alert('Display Name Updated Successfully !');
 				})
@@ -120,7 +120,7 @@ auth.onAuthStateChanged(user => {
 		}
 		editButton2.addEventListener('click', editInformation2);
 	} else if(user.phoneNumber && user.displayName) {
-		jinaHolder.innerText = user.displayName;
+		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
 		text2.value = user.displayName;
@@ -143,7 +143,7 @@ auth.onAuthStateChanged(user => {
 					displayName: newDisplayName2
 				})
 				.then(() => {
-					document.getElementById('jinaHolder').innerText = displayNameField2.value;
+					jinaHolder.value = displayNameField2.value;
 					localStorage.setItem('disname',newDisplayName2);
 					alert('Display Name Updated Successfully !');
 				})
@@ -156,7 +156,7 @@ auth.onAuthStateChanged(user => {
 		}
 		editButton2.addEventListener('click', editInformation2);
 	}  else if(user.phoneNumber && !user.displayName) {
-		jinaHolder.innerText = user.phoneNumber;
+		jinaHolder.value = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
 		text2.value = user.phoneNumber;
@@ -179,7 +179,7 @@ auth.onAuthStateChanged(user => {
 					displayName: newDisplayName2
 				})
 				.then(() => {
-					document.getElementById('jinaHolder').innerText = displayNameField2.value;
+					jinaHolder.value = displayNameField2.value;
 					localStorage.setItem('disname',newDisplayName2);
 					alert('Display Name Updated Successfully !');
 				})
@@ -192,7 +192,7 @@ auth.onAuthStateChanged(user => {
 		}
 		editButton2.addEventListener('click', editInformation2);
 	} else if(user.isAnonymous && user.displayName) {
-		jinaHolder.innerText = user.displayName;
+		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
 		text2.value = user.displayName;
@@ -217,7 +217,7 @@ auth.onAuthStateChanged(user => {
 					displayName: newDisplayName2
 				})
 				.then(() => {
-					document.getElementById('jinaHolder').innerText = displayNameField2.value;
+					jinaHolder.value = displayNameField2.value;
 					localStorage.setItem('disname',newDisplayName2);
 					alert('Display Name Updated Successfully !');
 				})
@@ -230,7 +230,7 @@ auth.onAuthStateChanged(user => {
 		}
 		editButton2.addEventListener('click', editInformation2);
 	} else if(user.isAnonymous && !user.displayName) {
-		jinaHolder.innerText = 'Anonymous';
+		jinaHolder.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
 		text2.value = 'Anonymous';
@@ -255,7 +255,7 @@ auth.onAuthStateChanged(user => {
 					displayName: newDisplayName2
 				})
 				.then(() => {
-					document.getElementById('jinaHolder').innerText = displayNameField2.value;
+					jinaHolder.value = displayNameField2.value;
 					localStorage.setItem('disname',newDisplayName2);
 					alert('Display Name Updated Successfully !');
 				})

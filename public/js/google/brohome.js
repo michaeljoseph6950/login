@@ -49,7 +49,7 @@ auth.onAuthStateChanged(user => {
 		thenoPic.style.display = 'inline-block';
 	}
 	if (user.displayName && user.email) {
-		jinaHolder.innerText = user.displayName;
+		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = user.displayName;
 		nameHolder2.value = user.displayName;
@@ -69,7 +69,7 @@ auth.onAuthStateChanged(user => {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
 
-		jinaHolder.innerText = theaddress;
+		jinaHolder.value = theaddress;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = theaddress;
 		nameHolder2.value = theaddress;
@@ -86,7 +86,7 @@ auth.onAuthStateChanged(user => {
 			}
 		}
 	} if (user.phoneNumber && user.displayName) {
-		jinaHolder.innerText = user.displayName;
+		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = user.displayName;
 		nameHolder2.value = user.displayName;
@@ -103,7 +103,7 @@ auth.onAuthStateChanged(user => {
 			}
 		}
 	}  if (user.phoneNumber && !user.displayName) {
-		jinaHolder.innerText = user.phoneNumber;
+		jinaHolder.value = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = user.phoneNumber;
 		nameHolder2.value = user.phoneNumber;
@@ -120,7 +120,7 @@ auth.onAuthStateChanged(user => {
 			}
 		}
 	} else 	if (user.isAnonymous && user.displayName) {
-		jinaHolder.innerText = user.displayName;
+		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = user.displayName;
 		nameHolder2.value = user.displayName;
@@ -137,7 +137,7 @@ auth.onAuthStateChanged(user => {
 			}
 		}
 	} else 	if (user.isAnonymous && !user.displayName) {
-		jinaHolder.innerText = 'Anonymous';
+		jinaHolder.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = 'Anonymous';
 		nameHolder2.value = 'Anonymous';
