@@ -15,6 +15,9 @@
 .fa-toggle-on:before {
     content:"\f35a"
 }
+.fa-sync-alt:before{
+	content:"\f2f1"
+}
 
 .fa-angle-down:before {
     content:"\f063"
