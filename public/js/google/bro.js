@@ -14,10 +14,6 @@ const avatarHolder = document.getElementById("avatar");
 const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
 
-const theText = document.getElementById('text');
-const displayNameField = document.getElementById('text');
-const editButton = document.getElementById('copy');
-
 const auth = firebase.auth();
 
 
@@ -34,191 +30,23 @@ auth.onAuthStateChanged(user => {
 	if (user.displayName && user.email) {
 		jinaHolder.innerText = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
-
-		theText.value = user.displayName;
-		const editInformation = () => {
-			const newNameAndPhoto = {
-				newDisplayName: displayNameField.value
-			};
-			changeNameAndPhoto(user, newNameAndPhoto);
-			
-		}
-		const changeNameAndPhoto = (user, newNameAndPhoto) => {
-			const {newDisplayName} = newNameAndPhoto;
-			if(newDisplayName !== user.displayName && newDisplayName !== localStorage.getItem('disname')) {
-				user.updateProfile({
-					displayName: newDisplayName
-				})
-				.then(() => {
-					document.getElementById('jinaHolder').innerText = displayNameField.value;
-					localStorage.setItem('disname',newDisplayName);
-					alert('Display Name Updated Successfully !');
-				})
-				.catch(error => {
-					console.error(error);
-				})
-			} else {
-				theText.focus();
-			}
-		}
-		editButton.addEventListener('click', editInformation);
 	} else if (!user.displayName && user.email) {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
 		jinaHolder.innerText = theaddress;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
-
-		theText.value = theaddress;
-		const editInformation = () => {
-			const newNameAndPhoto = {
-				newDisplayName: displayNameField.value
-			};
-			changeNameAndPhoto(user, newNameAndPhoto);
-			
-		}
-		const changeNameAndPhoto = (user, newNameAndPhoto) => {
-			const {newDisplayName} = newNameAndPhoto;
-			if(newDisplayName !== theaddress && newDisplayName !== localStorage.getItem('disname')) {
-				user.updateProfile({
-					displayName: newDisplayName
-				})
-				.then(() => {
-					document.getElementById('jinaHolder').innerText = displayNameField.value;
-					localStorage.setItem('disname',newDisplayName);
-					alert('Display Name Updated Successfully !');
-				})
-				.catch(error => {
-					console.error(error);
-				})
-			} else {
-				theText.focus();
-			}
-		}
-		editButton.addEventListener('click', editInformation);
 	} else if(user.phoneNumber && user.displayName) {
 		jinaHolder.innerText = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
-
-		theText.value = user.displayName;
-		const editInformation = () => {
-			const newNameAndPhoto = {
-				newDisplayName: displayNameField.value
-			};
-			changeNameAndPhoto(user, newNameAndPhoto);
-			
-		}
-		const changeNameAndPhoto = (user, newNameAndPhoto) => {
-			const {newDisplayName} = newNameAndPhoto;
-			if(newDisplayName !== user.displayName && newDisplayName !== localStorage.getItem('disname')) {
-				user.updateProfile({
-					displayName: newDisplayName
-				})
-				.then(() => {
-					document.getElementById('jinaHolder').innerText = displayNameField.value;
-					localStorage.setItem('disname',newDisplayName);
-					alert('Display Name Updated Successfully !');
-				})
-				.catch(error => {
-					console.error(error);
-				})
-			} else {
-				theText.focus();
-			}
-		}
-		editButton.addEventListener('click', editInformation);
 	} else if(user.phoneNumber && !user.displayName) {
 		jinaHolder.innerText = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
-
-		theText.value = user.phoneNumber;
-		const editInformation = () => {
-			const newNameAndPhoto = {
-				newDisplayName: displayNameField.value
-			};
-			changeNameAndPhoto(user, newNameAndPhoto);
-			
-		}
-		const changeNameAndPhoto = (user, newNameAndPhoto) => {
-			const {newDisplayName} = newNameAndPhoto;
-			if(newDisplayName !== user.phoneNumber && newDisplayName !== localStorage.getItem('disname')) {
-				user.updateProfile({
-					displayName: newDisplayName
-				})
-				.then(() => {
-					document.getElementById('jinaHolder').innerText = displayNameField.value;
-					localStorage.setItem('disname',newDisplayName);
-					alert('Display Name Updated Successfully !');
-				})
-				.catch(error => {
-					console.error(error);
-				})
-			} else {
-				theText.focus();
-			}
-		}
-		editButton.addEventListener('click', editInformation);
 	} else 	if (user.isAnonymous && user.displayName) {
 		jinaHolder.innerText = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
-
-		theText.value = user.displayName;
-		const editInformation = () => {
-			const newNameAndPhoto = {
-				newDisplayName: displayNameField.value
-			};
-			changeNameAndPhoto(user, newNameAndPhoto);
-			
-		}
-		const changeNameAndPhoto = (user, newNameAndPhoto) => {
-			const {newDisplayName} = newNameAndPhoto;
-			if(newDisplayName !== user.displayName && newDisplayName !== localStorage.getItem('disname')) {
-				user.updateProfile({
-					displayName: newDisplayName
-				})
-				.then(() => {
-					document.getElementById('jinaHolder').innerText = displayNameField.value;
-					localStorage.setItem('disname',newDisplayName);
-					alert('Display Name Updated Successfully !');
-				})
-				.catch(error => {
-					console.error(error);
-				})
-			} else {
-				theText.focus();
-			}
-		}
-		editButton.addEventListener('click', editInformation);
 	} else 	if(user.isAnonymous && !user.displayName) {
 		jinaHolder.innerText = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
-
-		theText.value = 'Anonymous';
-		const editInformation = () => {
-			const newNameAndPhoto = {
-				newDisplayName: displayNameField.value
-			};
-			changeNameAndPhoto(user, newNameAndPhoto);
-			
-		}
-		const changeNameAndPhoto = (user, newNameAndPhoto) => {
-			const {newDisplayName} = newNameAndPhoto;
-			if(newDisplayName !== 'Anonymous' && newDisplayName !== localStorage.getItem('disname')) {
-				user.updateProfile({
-					displayName: newDisplayName
-				})
-				.then(() => {
-					document.getElementById('jinaHolder').innerText = displayNameField.value;
-					localStorage.setItem('disname',newDisplayName);
-					alert('Display Name Updated Successfully !');
-				})
-				.catch(error => {
-					console.error(error);
-				})
-			} else {
-				theText.focus();
-			}
-		}
-		editButton.addEventListener('click', editInformation);
 	} 
 });
 
