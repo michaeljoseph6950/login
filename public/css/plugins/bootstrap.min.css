@@ -7952,7 +7952,7 @@ a.text-dark:focus, a.text-dark:hover {
 #style-switcher {
 	left: -350px;
 	position: fixed;
-	top: 60%;
+	top: 70%;
 	padding: 30px 14px;
 	width: 350px;
 	z-index: 9999;
