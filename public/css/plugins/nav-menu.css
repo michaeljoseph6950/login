@@ -364,6 +364,7 @@ header.scrollHeader .navbar-default {
   color: white;
   text-transform: uppercase !important;
   margin: 3px 0 0 !important;
+  padding: 0 !important;
   font-size: 22px;
   width: auto !important;
   overflow-x: scroll !important;
