@@ -30,6 +30,10 @@ const labelName = document.getElementById('label-name');
 const displayNameField2 = document.getElementById('text2');
 const editButton2 = document.getElementById('copy2');
 
+if(!window.location.href.includes('ogins')){
+	window.location.assign('index')
+}
+
 
 auth.onAuthStateChanged(user => {
 	if (!user) {
