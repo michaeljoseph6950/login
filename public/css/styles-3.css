@@ -245,7 +245,7 @@ blink.high {
 #vpnModal .modal-content,
 #profileModal .modal-content,
 #exampleModal .modal-content {
-  background: rgba(0, 115, 173, 0.31) !important;
+  background: rgba(9, 72, 112, 0.5) !important;
 }
 #modalsend {
   background: rgba(0, 115, 173, 0.25) !important;
