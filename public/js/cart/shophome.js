@@ -100,6 +100,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 3)){
     var profileModal = document.getElementById('profileModal');
     profileModal.getElementsByClassName('dataTables_paginate')[0].style.display = 'block';
+    profileModal.getElementsByClassName('dataTables_length')[0].style.display = 'block'
     
 }
 

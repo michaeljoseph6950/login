@@ -47,7 +47,8 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 }
 
 if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 3)){
-    document.getElementsByClassName('dataTables_paginate')[0].style.display = 'block'
+    document.getElementsByClassName('dataTables_paginate')[0].style.display = 'block';
+    document.getElementsByClassName('dataTables_length')[0].style.display = 'block'
 }
 
 var addToCartButtons = document.getElementsByClassName('money');
@@ -126,7 +127,8 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
                 return
             }
             if(cartItemNames.length > 2.5) {
-                document.getElementsByClassName('dataTables_paginate')[0].style.display = 'block'
+                document.getElementsByClassName('dataTables_paginate')[0].style.display = 'block';
+                document.getElementsByClassName('dataTables_length')[0].style.display = 'block'
             }
         }
     } else {

@@ -166,7 +166,8 @@
 	margin-top: -3px !important;
 }
 
-section .dataTables_wrapper .dataTables_paginate{
+section .dataTables_wrapper .dataTables_paginate,
+section .dataTables_wrapper dataTables_length {
     display: block;
 }
 
