@@ -314,7 +314,7 @@
                             Would you like to get bank log details sent via email, 
                             or via sms as a link, or you prefer to download the bank log and remain anonymous?
                         </p>
-                        <a class="butn home-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <a class="butn home-btn" data-bs-toggle="modal" data-bs-target="#vpnModal">
                             Link Email Address
                             <img src="img/partners/mail.png">
                         </a>
@@ -366,6 +366,67 @@
     <i class="fas fa-angle-up"></i>
 </a>
 
+
+<div class="modal fade"  id="vpnModal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="section-heading">
+                    <h4>
+                        Link Email Address
+                    </h4>
+                </div>
+                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body vpn-modal">
+                <p>
+                    Pro tip: Use a <span>proton mail</span> account or a <span>burner email</span> to login on the site
+                </p>
+            </div>
+            <div class="modal-body">
+                <li class="thevpn">
+                    <img src="img/partners/google.png">
+                    <a class="butn vbtn" id="signGoogle">
+                        Google Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+
+                <li class="thevpn">
+                    <img src="img/partners/outlook.png">
+                    <a class="butn vbtn"  data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Outlook Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+
+                <li class="thevpn">
+                    <img src="img/partners/protonmail.png">
+                    <a class="butn vbtn"  data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Proton Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+
+                <li class="thevpn">
+                    <img src="img/partners/yah.png">
+                    <a class="butn vbtn" id="signYahoo">
+                        Yahoo Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+
+                <li class="thevpn">
+                    <img src="img/partners/mail.png">
+                    <a class="butn vbtn"  data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Any Other Mail
+                    </a>
+                </li>
+            </div>
+
+        </div>
+    </div>   
+</div>
 
 
 <div class="modal fade"  id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false">
