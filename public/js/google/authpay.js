@@ -27,9 +27,9 @@ const theDate = document.getElementById('the-date');
 const labelMail = document.getElementById('label-mail');
 
 
-if(!window.location.href.includes('ogins')){
-	window.location.assign('index')
-}
+// if(!window.location.href.includes('ogins')){
+// 	window.location.assign('index')
+// }
 
 
 auth.onAuthStateChanged(user => {
@@ -107,6 +107,7 @@ jinaHolder.addEventListener("change", () => {
 	})
 	.then(() => {
 		alert('Display Name Updated Successfully !');
+		jinaHolder3.value = jinaHolder.value;
 	})
 	.catch(error => {
 		jinaHolder.focus()
@@ -119,6 +120,7 @@ jinaHolder3.addEventListener("change", () => {
 	})
 	.then(() => {
 		alert('Display Name Updated Successfully !');
+		jinaHolder.value = jinaHolder3.value;
 	})
 	.catch(error => {
 		jinaHolder3.focus();
