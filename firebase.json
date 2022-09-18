@@ -16,10 +16,6 @@
         "destination": "/bankofamerica.html"
       },
       {
-        "source": "/bitcoin100",
-        "destination": "/bitcoin100.html"
-      },
-      {
         "source": "/chase",
         "destination": "/chase.html"
       },
@@ -133,11 +129,6 @@
       {
         "source": "/bankofamerica.html",
         "destination": "/bankofamerica",
-        "type": 301
-      },
-      {
-        "source": "/bitcoin100.html",
-        "destination": "/bitcoin100",
         "type": 301
       },
       {
