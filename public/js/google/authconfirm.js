@@ -218,6 +218,18 @@ $('#myform').on('submit', function(ev) {
 });
 
 
+jinaHolder.addEventListener("change", () => {
+	auth.currentUser.updateProfile({
+		displayName: jinaHolder.value
+	})
+	.then(() => {
+		alert('Display Name Updated Successfully !');
+	})
+	.catch(error => {
+		console.error(error);
+	})
+});
+
 
 const logOut = document.getElementById('logout');
 logOut.addEventListener('click', () => {

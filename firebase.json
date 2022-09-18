@@ -16,10 +16,6 @@
         "destination": "/bankofamerica.html"
       },
       {
-        "source": "/navbar",
-        "destination": "/navbar.html"
-      },
-      {
         "source": "/chase",
         "destination": "/chase.html"
       },
@@ -138,11 +134,6 @@
       {
         "source": "/chase.html",
         "destination": "/chase",
-        "type": 301
-      },
-      {
-        "source": "/navbar.html",
-        "destination": "/navbar",
         "type": 301
       },
       {

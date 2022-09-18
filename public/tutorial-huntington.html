@@ -40,12 +40,12 @@
         <header class="header-style2">
             <div class="navbar-default">
                 <nav class="navbar">
-                    <a class="navbar-header" href="dashboard">
-                        <img style="display: none" id="logo" src="img/logos/logo4.png">
-                        <img style="display: none" id="avatar">
+                    <a class="navbar-header">
+                        <img style="display: none" id="logo" src="img/logos/logo4.png" onclick="window.location.assign('dashboard')">
+                        <img style="display: none" id="avatar" onclick="window.location.assign('dashboard')">
                         <div class="jina-div">
-                            <input id="jinaHolder" readonly>
-                            <span id="jinaHolder2"></span>
+                            <input id="jinaHolder">
+                            <span id="jinaHolder2" onclick="window.location.assign('dashboard')"></span>
                         </div>
                     </a>
     
@@ -1062,7 +1062,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
-    <script  src="js/google/bro.js"></script>
+    <script  src="js/google/auth.js"></script>
     <script src="js/main/core.method.js"></script>
     <script src="js/main/method.js"></script>
     <script src="datatables/js/jquery.datatable2.min.js"></script>
