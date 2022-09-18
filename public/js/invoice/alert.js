@@ -734,27 +734,4 @@ auth.onAuthStateChanged(user => {
 		$toastlast = $toast;
 	});
 
-
-    var toastbut2 = document.getElementById('showtoasts-2');
-
-	$(toastbut2).click(function() {
-		var shortCutFunction = 'success';
-		var msg = '';
-		var title = '';
-		toastr.options = {
-			closeButton: true,
-			debug: false,
-			newestOnTop: true,
-			progressBar: true,
-			positionClass: 'toast-top-full-width',
-			preventDuplicates: true,
-			onclick: null
-		};
-		if (!msg) {
-			msg = getMessage();
-		}
-		var $toast = toastr[shortCutFunction](msg, title);
-		$toastlast = $toast;
-	});
-
 });

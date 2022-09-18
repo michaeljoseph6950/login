@@ -250,20 +250,12 @@ function updateCartTotal() {
             Download 1 Bank Log
             <img src="img/partners/check.png">
         `;
-        document.getElementById('showtoasts-2').innerHTML = `
-            Download 1 Bank Log
-            <img src="img/partners/check.png">
-        `;
         document.getElementById('modal-amount').innerHTML = `
             Send $ <span id="omanyala" class="countup">${parseInt(total).toLocaleString()}</span> 
         `;
         document.getElementById('titlelogs2').innerText = `Cart: ${JSON.parse(localStorage.getItem('banklogs')).length}, Total: $${total.toLocaleString()}`
     } else if(JSON.parse(localStorage.getItem('banklogs')).length > 1) {
         document.getElementById('showtoasts').innerHTML = `
-            Download ${JSON.parse(localStorage.getItem('banklogs')).length} Bank Logs
-            <img src="img/partners/check.png">
-        `;
-        document.getElementById('showtoasts-2').innerHTML = `
             Download ${JSON.parse(localStorage.getItem('banklogs')).length} Bank Logs
             <img src="img/partners/check.png">
         `;

@@ -1220,7 +1220,6 @@ td {
     padding-right: 7px !important;
  }
 }
-#showtoasts-2,
 #showtoasts {
   font-weight: 600;
   padding-left: 7px !important;
@@ -1233,14 +1232,12 @@ td {
   width: auto;
   text-transform: uppercase !important;
 }
-#showtoasts-2:hover,
 #showtoasts:hover {
   border: 1.4px solid yellow;
 }
 #the-flag {
   width: 40px !important;
 }
-#showtoasts-2 img,
 #showtoasts img {
   width: 21px;
   position: relative;
