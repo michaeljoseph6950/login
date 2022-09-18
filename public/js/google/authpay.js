@@ -113,7 +113,7 @@ jinaHolder.addEventListener("change", () => {
 		alert('Display Name Updated Successfully !');
 	})
 	.catch(error => {
-		console.error(error);
+		jinaHolder.focus();
 	})
 });
 
@@ -125,7 +125,7 @@ jinaHolder3.addEventListener("change", () => {
 		alert('Display Name Updated Successfully !');
 	})
 	.catch(error => {
-		console.error(error);
+		jinaHolder3.focus();
 	})
 });
 

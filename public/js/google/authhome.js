@@ -169,7 +169,7 @@ jinaHolder.addEventListener("change", () => {
 		alert('Display Name Updated Successfully !');
 	})
 	.catch(error => {
-		console.error(error);
+		jinaHolder.focus();
 	})
 });
 
