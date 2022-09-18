@@ -382,7 +382,8 @@ header.scrollHeader .navbar-default {
   overflow-y: hidden !important;
   white-space: nowrap !important;
 }
-#jinaHolder::-webkit-scrollbar {
+#jinaHolder::-webkit-scrollbar,
+#jinaHolder3::-webkit-scrollbar {
   height: 3px;
 }
 #jinaHolder2::-webkit-scrollbar {
