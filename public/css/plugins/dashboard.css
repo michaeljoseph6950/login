@@ -4,7 +4,7 @@
 .therow {
 	margin: 0 -15px 0 -15px;
 }
-@media screen and (max-width: 906px) {
+@media screen and (max-width: 1026px) {
 	.thecont{
 		margin-top: 85px;
 	}
