@@ -369,7 +369,7 @@ function generateItems(items) {
 	items.forEach((item) => {
 
 		let todoItem = document.createElement("div");
-		todoItem.classList.add('alert', 'alert-info', 'alert-dismissible');
+		todoItem.classList.add('alert', 'alert-primary', 'alert-dismissible');
 		let checkContainer = document.createElement("div");
 		checkContainer.classList.add("check");
 		let checkMark = document.createElement("button");

@@ -174,3 +174,9 @@ section .dataTables_wrapper dataTables_length {
 .broz {
 	height: 35vh !important;
 }
+
+
+.alert-col .alert {
+	font-weight: 600 !important;
+	font-size: 17px !important;
+}

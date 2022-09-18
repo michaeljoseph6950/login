@@ -310,7 +310,7 @@ table.dataTable td{
     float:left;
     font-size: 17px;
     font-weight: 600;
-    display: none;
+    display: block;
 }
 .dataTables_wrapper .dataTables_length select{
   border-radius: 0;
