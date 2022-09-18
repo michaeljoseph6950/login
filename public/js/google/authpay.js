@@ -17,7 +17,6 @@ const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
 const jinaHolder3 = document.getElementById('jinaHolder3');
 
-const text2 = document.getElementById('text2');
 const theMail = document.getElementById('email3');
 const theId = document.getElementById('the-id');
 const thePic = document.getElementById('the-pic');
@@ -26,10 +25,7 @@ const theDate = document.getElementById('the-date');
 
 
 const labelMail = document.getElementById('label-mail');
-const labelName = document.getElementById('label-name');
 
-const displayNameField2 = document.getElementById('text2');
-const editButton2 = document.getElementById('copy2');
 
 if(!window.location.href.includes('ogins')){
 	window.location.assign('index')
