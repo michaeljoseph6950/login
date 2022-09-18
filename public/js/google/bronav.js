@@ -47,36 +47,20 @@ auth.onAuthStateChanged(user => {
 	} else 	if(user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
-
-        // const editInfo = () => {
-		// 	const newNameAndPhoto = {
-		// 		newDisplayName: jinaHolder.value
-		// 	};
-		// 	const user = auth.currentUser;
-		// 	changeNameAndPhoto(user, newNameAndPhoto);
-			
-		// }
-		// const changeNameAndPhoto = (user, newNameAndPhoto) => {
-		// 	const {newDisplayName} = newNameAndPhoto;
-		// 	if((newDisplayName !== 'Anonymous' && newDisplayName !== localStorage.getItem('disname'))) {
-		// 		user.updateProfile({
-		// 			displayName: newDisplayName
-		// 		})
-		// 		.then(() => {
-		// 			jinaHolder.value = jinaHolder.value;
-		// 			localStorage.setItem('disname',newDisplayName);
-		// 			alert('Display Name Updated Successfully !');
-		// 		})
-		// 		.catch(error => {
-		// 			console.error(error);
-		// 		})
-		// 	} else {
-		// 		jinaHolder.focus();
-		// 	}
-		// }
-	    document.getElementById('jinaHolder').addEventListener('', alert('hi'));
 	} 
 });
+
+function changeName() {
+	auth.currentUser.updateProfile({
+		displayName: jinaHolder.value
+	})
+	.then(() => {
+		alert('Display Name Updated Successfully !');
+	})
+	.catch(error => {
+		console.error(error);
+	})
+}
 
 const logOut = document.getElementById('logout');
 logOut.addEventListener('click', () => {
