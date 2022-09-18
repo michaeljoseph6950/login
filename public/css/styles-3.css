@@ -8,6 +8,7 @@
 }
 #copy-text,
 #showtoasts,
+#showtoasts-2,
 .lesnar,
 .butn.white.in-cart,
 .butn.in-cart,
@@ -310,6 +311,7 @@ blink.high {
 #canvas:hover {
   box-shadow: 0 25px 30px 0 #0073ad;
 }
+#showtoasts-2,
 #showtoasts {
   border: 1.4px solid rgba(0, 115, 173, 0.7);
 }

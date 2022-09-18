@@ -8105,7 +8105,7 @@ th {
 	filter: blur(0.7px);
 	opacity: 0.9;
 }
-#copy-text, #showtoasts {
+#copy-text, #showtoasts, #showtoasts-2 {
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
 	animation-name: Floating7;
