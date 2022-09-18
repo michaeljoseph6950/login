@@ -60,7 +60,7 @@
                 <img style="display: none" id="logo" src="img/logos/logo7.png" onclick="window.location.assign('dashboard')">
                 <img style="display: none" id="avatar" onclick="window.location.assign('dashboard')">
                 <div class="jina-div">
-                    <input id="jinaHolder">
+                    <input id="jinaHolder" maxlength="17">
                     <span id="jinaHolder2" onclick="window.location.assign('dashboard')"></span>
                 </div>
             </a>
@@ -375,22 +375,14 @@
                 </div>
                 <div class="modal-content">
                     <div class="modal-body" style="border-bottom: none !important">
-                        <div>
+                        <div class="flexing">
                             <img style="display: none;" id="the-pic">
+                            <input id="jinaHolder3" maxlength="17">
                             <img style="display: none;" src="img/logos/logo7.png" id="the-nopic">
                             <canvas id="canvas2" width="70px" height="70px"></canvas>
                         </div>
                     </div>
                     <div class="modal-body">
-                        <label id="label-name">Your Name:</label>
-                        <br>
-                        <div class="change-div2">
-                            <input type="text"  class="form-control" id="text2" maxlength="17">
-                            <button class="butn" id="copy2">     
-                                Edit <i class="fas fa-pencil-alt"></i>
-                            </button>
-                        </div>
-                        <br>
 
                         <div id="mail">
                             <label id="label-mail"></label>
@@ -553,7 +545,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
-    <script src="js/google/authinvoice.js"></script>
+    <script src="js/google/authpay.js"></script>
     <script src="js/cart/timer.js"></script>
     <script src="js/main/core.invoice.js"></script>
     <script src="js/main/invoice.js"></script>

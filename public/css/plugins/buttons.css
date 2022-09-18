@@ -1822,6 +1822,19 @@ td {
   height: 70px;
   float: left !important;
 }
+#jinaHolder3 {
+  margin-top: 10px !important;
+  position: absolute !important;
+  right: 25% !important;
+  left: 25% !important;
+  width: 50% !important;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase !important;
+  background-color: transparent !important;
+  border: 1.4px solid #121d33 !important;
+  font-size: 22px;
+}
 #canvas2 {
   border-radius: 50%;
   float: right !important;

@@ -15,6 +15,7 @@ const logoHolder = document.getElementById("logo");
 const avatarHolder = document.getElementById("avatar");
 const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
+const jinaHolder3 = document.getElementById('jinaHolder3');
 
 const text2 = document.getElementById('text2');
 const theMail = document.getElementById('email3');
@@ -30,9 +31,9 @@ const labelName = document.getElementById('label-name');
 const displayNameField2 = document.getElementById('text2');
 const editButton2 = document.getElementById('copy2');
 
-if(!window.location.href.includes('ogins')){
-	window.location.assign('index')
-}
+// if(!window.location.href.includes('ogins')){
+// 	window.location.assign('index')
+// }
 
 
 auth.onAuthStateChanged(user => {
@@ -50,227 +51,51 @@ auth.onAuthStateChanged(user => {
 	}
 	if (user.displayName && user.email) {
 		jinaHolder.value = user.displayName;
+		jinaHolder3.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
-		text2.value = user.displayName;
 		theMail.value = user.email;
-		labelName.innerText = "Your Name:";
 		labelMail.innerText = "Your Email:";
-
-		const editInformation2 = () => {
-			const newNameAndPhoto2 = {
-				newDisplayName2: displayNameField2.value
-			};
-			const user2 = auth.currentUser;
-			changeNameAndPhoto2(user2, newNameAndPhoto2);
-			
-		}
-		const changeNameAndPhoto2 = (user2, newNameAndPhoto2) => {
-			const {newDisplayName2} = newNameAndPhoto2;
-			if(newDisplayName2 !== user.displayName  && newDisplayName2 !== localStorage.getItem('disname')) {
-				user2.updateProfile({
-					displayName: newDisplayName2
-				})
-				.then(() => {
-					jinaHolder.value = displayNameField2.value;
-					localStorage.setItem('disname',newDisplayName2);
-					alert('Display Name Updated Successfully !');
-				})
-				.catch(error => {
-					console.error(error);
-				})
-			} else {
-				document.getElementById("text2").focus();
-			}
-		}
-		editButton2.addEventListener('click', editInformation2);
 	} else if (!user.displayName && user.email) {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
 
 		jinaHolder.value = theaddress;
+		jinaHolder3.value = theaddress;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
-		text2.value = theaddress;
 		theMail.value = user.email;
-		labelName.innerText = "Your Name:";
 		labelMail.innerText = "Your Email:";
-
-		const editInformation2 = () => {
-			const newNameAndPhoto2 = {
-				newDisplayName2: displayNameField2.value
-			};
-			const user2 = auth.currentUser;
-			changeNameAndPhoto2(user2, newNameAndPhoto2);
-			
-		}
-		const changeNameAndPhoto2 = (user2, newNameAndPhoto2) => {
-			const {newDisplayName2} = newNameAndPhoto2;
-			if(newDisplayName2 !== theaddress  && newDisplayName2 !== localStorage.getItem('disname')) {
-				user2.updateProfile({
-					displayName: newDisplayName2
-				})
-				.then(() => {
-					jinaHolder.value = displayNameField2.value;
-					localStorage.setItem('disname',newDisplayName2);
-					alert('Display Name Updated Successfully !');
-				})
-				.catch(error => {
-					console.error(error);
-				})
-			} else {
-				document.getElementById("text2").focus();
-			}
-		}
-		editButton2.addEventListener('click', editInformation2);
 	} else if(user.phoneNumber && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
-
-		text2.value = user.displayName;
+		jinaHolder3.value = user.displayName;
 		theMail.value = user.phoneNumber;
-		labelName.innerText = "Your Display Name:";
 		labelMail.innerText = "Your Phone Number:";
-
-		const editInformation2 = () => {
-			const newNameAndPhoto2 = {
-				newDisplayName2: displayNameField2.value
-			};
-			const user2 = auth.currentUser;
-			changeNameAndPhoto2(user2, newNameAndPhoto2);
-			
-		}
-		const changeNameAndPhoto2 = (user2, newNameAndPhoto2) => {
-			const {newDisplayName2} = newNameAndPhoto2;
-			if(newDisplayName2 !== user.displayName  && newDisplayName2 !== localStorage.getItem('disname')) {
-				user2.updateProfile({
-					displayName: newDisplayName2
-				})
-				.then(() => {
-					jinaHolder.value = displayNameField2.value;
-					localStorage.setItem('disname',newDisplayName2);
-					alert('Display Name Updated Successfully !');
-				})
-				.catch(error => {
-					console.error(error);
-				})
-			} else {
-				document.getElementById("text2").focus();
-			}
-		}
-		editButton2.addEventListener('click', editInformation2);
 	}  else if(user.phoneNumber && !user.displayName) {
 		jinaHolder.value = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
-
-		text2.value = user.phoneNumber;
+		jinaHolder3.value = user.phoneNumber;
 		theMail.value = user.phoneNumber;
-		labelName.innerText = "Your Display Name:";
 		labelMail.innerText = "Your Phone Number:";
-
-		const editInformation2 = () => {
-			const newNameAndPhoto2 = {
-				newDisplayName2: displayNameField2.value
-			};
-			const user2 = auth.currentUser;
-			changeNameAndPhoto2(user2, newNameAndPhoto2);
-			
-		}
-		const changeNameAndPhoto2 = (user2, newNameAndPhoto2) => {
-			const {newDisplayName2} = newNameAndPhoto2;
-			if(newDisplayName2 !== user.phoneNumber  && newDisplayName2 !== localStorage.getItem('disname')) {
-				user2.updateProfile({
-					displayName: newDisplayName2
-				})
-				.then(() => {
-					jinaHolder.value = displayNameField2.value;
-					localStorage.setItem('disname',newDisplayName2);
-					alert('Display Name Updated Successfully !');
-				})
-				.catch(error => {
-					console.error(error);
-				})
-			} else {
-				document.getElementById("text2").focus();
-			}
-		}
-		editButton2.addEventListener('click', editInformation2);
 	} else if(user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
-
-		text2.value = user.displayName;
+		jinaHolder3.value = user.displayName;
 		theMail.value = '**Logged in anonymously**';
-		labelName.innerText = "Your Display Name:";
 		labelMail.innerText = "Your Email:";
 
 		document.getElementById('mail').style.display = 'none';
 
-		const editInformation2 = () => {
-			const newNameAndPhoto2 = {
-				newDisplayName2: displayNameField2.value
-			};
-			const user2 = auth.currentUser;
-			changeNameAndPhoto2(user2, newNameAndPhoto2);
-			
-		}
-		const changeNameAndPhoto2 = (user2, newNameAndPhoto2) => {
-			const {newDisplayName2} = newNameAndPhoto2;
-			if(newDisplayName2 !== user.displayName  && newDisplayName2 !== localStorage.getItem('disname')) {
-				user2.updateProfile({
-					displayName: newDisplayName2
-				})
-				.then(() => {
-					jinaHolder.value = displayNameField2.value;
-					localStorage.setItem('disname',newDisplayName2);
-					alert('Display Name Updated Successfully !');
-				})
-				.catch(error => {
-					console.error(error);
-				})
-			} else {
-				document.getElementById("text2").focus();
-			}
-		}
-		editButton2.addEventListener('click', editInformation2);
 	} else if(user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
-
-		text2.value = 'Anonymous';
+		jinaHolder3.value = 'Anonymous';
 		theMail.value = '**Logged in anonymously**';
-		labelName.innerText = "Your Display Name:";
 		labelMail.innerText = "Your Email:";
 
 		document.getElementById('mail').style.display = 'none';
 
-		const editInformation2 = () => {
-			const newNameAndPhoto2 = {
-				newDisplayName2: displayNameField2.value
-			};
-			const user2 = auth.currentUser;
-			changeNameAndPhoto2(user2, newNameAndPhoto2);
-			
-		}
-		const changeNameAndPhoto2 = (user2, newNameAndPhoto2) => {
-			const {newDisplayName2} = newNameAndPhoto2;
-			if(newDisplayName2 !== 'Anonymous' && newDisplayName2 !== localStorage.getItem('disname')) {
-				user2.updateProfile({
-					displayName: newDisplayName2
-				})
-				.then(() => {
-					jinaHolder.value = displayNameField2.value;
-					localStorage.setItem('disname',newDisplayName2);
-					alert('Display Name Updated Successfully !');
-				})
-				.catch(error => {
-					console.error(error);
-				})
-			} else {
-				document.getElementById("text2").focus();
-			}
-		}
-		editButton2.addEventListener('click', editInformation2);
 	} 
 
 	if(user.uid){
@@ -283,6 +108,18 @@ auth.onAuthStateChanged(user => {
 jinaHolder.addEventListener("change", () => {
 	auth.currentUser.updateProfile({
 		displayName: jinaHolder.value
+	})
+	.then(() => {
+		alert('Display Name Updated Successfully !');
+	})
+	.catch(error => {
+		console.error(error);
+	})
+});
+
+jinaHolder3.addEventListener("change", () => {
+	auth.currentUser.updateProfile({
+		displayName: jinaHolder3.value
 	})
 	.then(() => {
 		alert('Display Name Updated Successfully !');
