@@ -2039,7 +2039,6 @@ ul.countdown li p {
   width: 100% !important;
   padding-left: 3px !important;
   padding-right: 3px !important;
-  box-shadow: 0 0 0 1.4px rgba(18, 29, 51, 0.49);
 }
 .vbtn:hover, .vmail:hover {
   color: #121d33 !important;
