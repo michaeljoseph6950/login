@@ -2,11 +2,17 @@ let items = [];
 
 var table1 = jQuery('#example1').DataTable();
 
-if(!localStorage.getItem('banklogs') || ((JSON.parse(localStorage.getItem('banklogs')).length) < 1)) {
-    document.getElementById('predat').style.display = 'flex';
-} else {
-    document.getElementById('predat').style.display = 'none';
-}        
+auth.onAuthStateChanged(user => {
+    if (!user.isAnonymous) {
+        if(!localStorage.getItem('banklogs') || ((JSON.parse(localStorage.getItem('banklogs')).length) < 1)) {
+            document.getElementById('predat').style.display = 'flex';
+        } else {
+            document.getElementById('predat').style.display = 'none';
+        }        
+    } else {
+        document.getElementById('predat').style.display = 'none';
+    }
+});
 
 if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
 

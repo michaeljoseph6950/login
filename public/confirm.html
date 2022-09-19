@@ -311,22 +311,18 @@
                             Bank Logs Invoice
                         </h4>
                         <p>
-                            Would you like to get bank log details sent via email, 
-                            or via sms as a link, or you prefer to download the bank log and remain anonymous?
+                            Link a valid email address where bank log details will be sent to, or you can link 
+                            phone number and the bank logs will be sent as a dynamic link that expires after 7 hours from the 
+                            time or purchase.
                         </p>
-                        <a class="butn home-btn" data-bs-toggle="modal" data-bs-target="#vpnModal">
+                        <a class="butn home-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
                             Link Email Address
                             <img src="img/partners/mail.png">
                         </a>
 
-                        <a class="butn phone-btn" data-bs-toggle="modal" data-bs-target="#phoneModal">
+                        <a class="butn anon-btn" data-bs-toggle="modal" data-bs-target="#phoneModal">
                             Link Phone Number
                             <img src="img/partners/pho.jpg">
-                        </a>
-
-                        <a class="butn anon-btn" href="invoice">
-                            Remain Anonymous
-                            <img src="img/partners/anonymous.png">
                         </a>
 
                     </div>
@@ -365,68 +361,6 @@
 <a class="scroll-to-top">
     <i class="fas fa-angle-up"></i>
 </a>
-
-
-<div class="modal fade"  id="vpnModal" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="section-heading">
-                    <h4>
-                        Link Email Address
-                    </h4>
-                </div>
-                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body vpn-modal">
-                <p>
-                    Pro tip: Use a <span>proton mail</span> account or a <span>burner email</span> to login on the site
-                </p>
-            </div>
-            <div class="modal-body">
-                <li class="thevpn">
-                    <img src="img/partners/google.png">
-                    <a class="butn vbtn" id="signGoogle">
-                        Google Mail
-                    </a>
-                </li>
-                <hr class="thehr">
-
-                <li class="thevpn">
-                    <img src="img/partners/mail.png">
-                    <a class="butn vbtn"  data-bs-toggle="modal" data-bs-target="#loginModal">
-                        iCloud Mail
-                    </a>
-                </li>
-                <hr class="thehr">
-
-                <li class="thevpn">
-                    <img src="img/partners/outlook.png">
-                    <a class="butn vbtn"  data-bs-toggle="modal" data-bs-target="#loginModal">
-                        Outlook Mail
-                    </a>
-                </li>
-                <hr class="thehr">
-
-                <li class="thevpn">
-                    <img src="img/partners/protonmail.png">
-                    <a class="butn vbtn"  data-bs-toggle="modal" data-bs-target="#loginModal">
-                        Proton Mail
-                    </a>
-                </li>
-                <hr class="thehr">
-
-                <li class="thevpn">
-                    <img src="img/partners/yah.png">
-                    <a class="butn vbtn" id="signYahoo">
-                        Yahoo Mail
-                    </a>
-                </li>
-            </div>
-
-        </div>
-    </div>   
-</div>
 
 
 <div class="modal fade"  id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false">
@@ -570,7 +504,7 @@
             </div>    
 
             <div class="modal-footer modal-checkout">
-                <a class="butn" href="confirm" id="thetot1">
+                <a class="butn" href="invoice" id="thetot1">
                     Checkout: $0
                 </a>
             </div>
