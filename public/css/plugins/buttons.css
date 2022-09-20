@@ -2103,13 +2103,13 @@ ul.countdown li p {
     margin: 14px auto !important;
  }
 }
-.vpn-modal p, .protip {
+.vpn-modal p {
   text-align: center !important;
   align-items: center !important;
   margin: 3px auto !important;
   font-size: 17px !important;
 }
-.protip span {
+.vpn-modal p span {
   color: yellow !important;
 }
 .change {
