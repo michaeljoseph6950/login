@@ -177,9 +177,9 @@ blink.high {
 .lesnar {
   border: 1.4px solid #d0ad55;
 }
-.gold {
+.butn.gold {
   border: 1.4px solid rgba(208, 173, 85, 0.8);
-  background: rgb(246, 239, 221) !important;
+  background: rgb(246, 239, 221);
 }
 #jinaHolder3 {
   border: 1.4px solid rgb(56, 58, 58) !important;

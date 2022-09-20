@@ -17,13 +17,14 @@ const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
 const jinaHolder3 = document.getElementById('jinaHolder3');
 
-const theMail = document.getElementById('email3');
+const theMail = document.getElementById('text2');
 const theId = document.getElementById('the-id');
 const thePic = document.getElementById('the-pic');
 const thenoPic = document.getElementById('the-nopic');
 const theDate = document.getElementById('the-date');
 
 
+const signUp = document.getElementById('copy2');
 const labelMail = document.getElementById('label-mail');
 
 
@@ -54,6 +55,10 @@ auth.onAuthStateChanged(user => {
 
 		theMail.value = user.email;
 		labelMail.innerText = "Your Email:";
+
+		theMail.style.width = '100%';
+		signUp.style.display = 'none';
+		theMail.readOnly = true;
 	} else if (!user.displayName && user.email) {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
@@ -64,39 +69,155 @@ auth.onAuthStateChanged(user => {
 
 		theMail.value = user.email;
 		labelMail.innerText = "Your Email:";
+
+		theMail.style.width = '100%';
+		signUp.style.display = 'none';
+		theMail.readOnly = true;
 	} else if(user.phoneNumber && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = user.displayName;
 		theMail.value = user.phoneNumber;
 		labelMail.innerText = "Your Phone Number:";
+
+		theMail.style.width = '100%';
+		signUp.style.display = 'none';
+		theMail.readOnly = true;
 	}  else if(user.phoneNumber && !user.displayName) {
 		jinaHolder.value = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = user.phoneNumber;
 		theMail.value = user.phoneNumber;
 		labelMail.innerText = "Your Phone Number:";
+
+		theMail.style.width = '100%';
+		signUp.style.display = 'none';
+		theMail.readOnly = true;
 	} else if(user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = user.displayName;
-		theMail.value = '**Logged in anonymously**';
 		labelMail.innerText = "Your Email:";
+
+		theMail.addEventListener('click', clearField)
 	} else if(user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = 'Anonymous';
-		theMail.value = '**Logged in anonymously**';
 		labelMail.innerText = "Your Email:";
+
+		theMail.addEventListener('click', clearField)
 	} 
 
 	if(user.uid){
 		theId.value = user.uid;
 		theDate.value = new Date(user.metadata.b * 1);
-		// document.getElementById('showtoasts').focus();
 	}
 
 });
+
+
+function clearField() {
+	theMail.value = "";
+	theMail.focus()
+}
+
+const sendVerificationEmail = () => {
+	auth.currentUser.sendEmailVerification()
+}
+
+const signUpFunction = () => {
+	event.preventDefault();
+	const email = theMail.value;
+	var actionCodeSettings = {
+		url: 'https://www.logins.id/invoice',
+		handleCodeInApp: true,
+	};
+	if(email.includes('@gmail.com')) {
+		const googleProvider = new firebase.auth.GoogleAuthProvider;
+		auth.signInWithPopup(googleProvider).then(() => {
+			sendVerificationEmail();
+			window.location.reload();
+		}).catch(error => {
+			alert(error.message)
+		});
+	} else if(email.includes('@yahoo.com')) {
+		const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+		auth.signInWithPopup(yahooProvider).then(() => {
+			sendVerificationEmail();
+			window.location.reload();
+		}).catch(error => {
+			alert(error.message);
+		})
+	} else {
+		auth.sendSignInLinkToEmail(email, actionCodeSettings)
+		.then(() => {
+			alert('Verification link sent to your email ' + email + " check the spam / junk folder");
+			window.localStorage.setItem('emailForSignIn', email);
+		})
+		.catch(error => {
+			alert(error.message);
+		});
+	}
+}
+signUp.addEventListener('click', signUpFunction);
+
+
+if (auth.isSignInWithEmailLink(window.location.href)) {
+	var email = window.localStorage.getItem('emailForSignIn');
+	if (!email) {
+		localStorage.setItem('the-email', true)
+		email = window.prompt('Enter your email for confirmation');
+	}
+	auth.signInWithEmailLink(email, window.location.href)
+		.then((result) => {
+			if (localStorage.getItem('the-email')) {
+				sendVerificationEmail();
+				window.location.reload();
+			} else {
+				alert('Return to previous tab, email has been confirmed');
+				sendVerificationEmail();
+				window.close();
+			}
+		})
+		.catch((error) => {
+			console.log('Wrong email entered')
+		});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 jinaHolder.addEventListener("change", () => {
 	auth.currentUser.updateProfile({

@@ -1597,7 +1597,7 @@ td {
   text-transform: uppercase !important;
 }
 .port h4 a.boa {
-  font-size: 22.5px;
+  font-size: 22px;
 }
 .port a img {
   width: 100% !important;
@@ -1842,6 +1842,14 @@ td {
     right: 27% !important;
     left: 27 !important;
     width: 46% !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  #jinaHolder3 {
+    right: 29% !important;
+    left: 29% !important;
+    width: 42% !important;
+    font-size: 21px !important;
   }
 }
 #canvas2 {
@@ -2121,7 +2129,7 @@ ul.countdown li p {
 #text, #text2, #email3 {
   font-size: 17px;
   font-weight: 600;
-  width: 68%;
+  width: 65%;
   padding: 5px;
   border-radius: 0;
   margin: 0 1%;
@@ -2137,12 +2145,13 @@ ul.countdown li p {
   text-align: left !important;
 }
 #copy, #copy2 {
-  width: 30%;
+  width: 35%;
   padding: 0;
   color: #121d33;
   margin: 0 1%;
   text-align: center;
   font-weight: 600;
+  white-space: nowrap !important;
 }
 
 #email3 {
@@ -2150,35 +2159,35 @@ ul.countdown li p {
 }
 @media (max-width: 576px) {
   #text, #text2 {
-    width: 72%;
+    width: 68%;
  }
   #copy, #copy2 {
-    width: 26%;
+    width: 32%;
  }
 }
 
 @media (max-width: 396px) {
   #text, #text2 {
-    width: 72%;
+    width: 66%;
  }
   #copy, #copy2 {
-    width: 26%;
+    width: 34%;
  }
 }
 @media (max-width: 380px) {
   #text, #text2 {
-    width: 70%;
+    width: 65%;
  }
   #copy, #copy2 {
-    width: 28%;
+    width: 35%;
  }
 }
 @media (max-width: 374px) {
   #text, #text2 {
-    width: 68%;
+    width: 65%;
  }
   #copy, #copy2 {
-    width: 30%;
+    width: 35%;
  }
 }
 #profile-pic2,

@@ -22,7 +22,9 @@
 .fa-angle-down:before {
     content:"\f063"
 }
-
+.fa-user-check:before{
+	content:"\f4fc"
+}
 .fa-wallet:before {
     content:"\f555"
 }
