@@ -43,7 +43,7 @@
                     revslider_showDoubleJqueryError(".countdown");
                 } else {
                     countdown = tpj(".countdown").show().countdown({
-                        date: "30 Sep 2022 00:01:00",
+                        date: "10 Oct 2022 00:01:00",
                         format: "on"
                     });
                 }
