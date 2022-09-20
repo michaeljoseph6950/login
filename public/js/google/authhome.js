@@ -21,6 +21,8 @@ const theDate = document.getElementById('the-date');
 const avatarHolder = document.getElementById("avatar");
 const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
+const jinaHolder3 = document.getElementById('jinaHolder3');
+
 const nameHolder1 = document.getElementById('nameBro1');
 const nameHolder2 = document.getElementById('nameBro2');
 const nameHolder3 = document.getElementById('nameBro3');
@@ -50,6 +52,8 @@ auth.onAuthStateChanged(user => {
 	}
 	if (user.displayName && user.email) {
 		jinaHolder.value = user.displayName;
+		jinaHolder3.value = user.displayName;
+		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = user.displayName;
 		nameHolder2.value = user.displayName;
@@ -70,6 +74,8 @@ auth.onAuthStateChanged(user => {
 		var theaddress = themail.substring(0, themail.indexOf('@'));
 
 		jinaHolder.value = theaddress;
+		jinaHolder3.value = theaddress;
+		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = theaddress;
 		nameHolder2.value = theaddress;
@@ -87,6 +93,8 @@ auth.onAuthStateChanged(user => {
 		}
 	} if (user.phoneNumber && user.displayName) {
 		jinaHolder.value = user.displayName;
+		jinaHolder3.value = user.displayName;
+		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = user.displayName;
 		nameHolder2.value = user.displayName;
@@ -104,6 +112,8 @@ auth.onAuthStateChanged(user => {
 		}
 	}  if (user.phoneNumber && !user.displayName) {
 		jinaHolder.value = user.phoneNumber;
+		jinaHolder3.value = user.phoneNumber;
+		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = user.phoneNumber;
 		nameHolder2.value = user.phoneNumber;
@@ -121,6 +131,8 @@ auth.onAuthStateChanged(user => {
 		}
 	} else 	if (user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
+		jinaHolder3.value = user.displayName;
+		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = user.displayName;
 		nameHolder2.value = user.displayName;
@@ -138,6 +150,8 @@ auth.onAuthStateChanged(user => {
 		}
 	} else 	if (user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
+		jinaHolder3.value = 'Anonymous';
+		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = 'Anonymous';
 		nameHolder2.value = 'Anonymous';
@@ -170,6 +184,19 @@ jinaHolder.addEventListener("change", () => {
 	})
 	.catch(error => {
 		jinaHolder.focus();
+	})
+});
+
+jinaHolder3.addEventListener("change", () => {
+	auth.currentUser.updateProfile({
+		displayName: jinaHolder3.value
+	})
+	.then(() => {
+		alert('Display Name Updated Successfully !');
+		jinaHolder.value = jinaHolder3.value;
+	})
+	.catch(error => {
+		jinaHolder3.focus();
 	})
 });
 
