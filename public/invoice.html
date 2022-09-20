@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="css/plugins/default.css" />
     <link rel="stylesheet" href="css/plugins/fontawesome-all.min.css" />
     <link rel="stylesheet" href="css/plugins/nav-menu.css" />
-    <link rel="stylesheet" href="css/plugins/xzoom.css" />
 
     <link href="css/styles-7.css" rel="stylesheet" id="colors">
     <link href="css/plugins/toastr2.css" rel="stylesheet">
@@ -267,6 +266,43 @@
     <div class="container-fluid">
     <div class="row no-margin-bottom therow">
 
+        <div class="col-xl-9 col-lg-8 col-md-7 col-12" id="invoice-col-table">
+            <div class="modal-content" id="invoice-table">
+                <div class="modal-body" id="invoice-table-div">
+                    <div class="table-responsive">
+                        <table id="example1" class="display table table-bordered table-hover table-striped" style="width: 100%;">
+                            <thead>
+                                <tr class="table-primary">
+                                    <th>Bank</th>
+                                    <th>Balance</th>
+                                    <th>Account</th>
+                                    <th class="remove-th"><i class="fas fa-trash"></i></th>
+                                    <th>Price</th>
+                                    <th>Info1</th>
+                                    <th>Info2</th>
+                                    <th>Info3</th>
+                                    <th>Info4</th>
+                                    <th>Info5</th>
+                                    <th>Info6</th>
+                                    <th>Link</th>
+                                </tr>
+                            </thead>
+                            <tbody class="champez">
+                                
+                            </tbody>                                        
+                        </table>                        
+                    </div> 
+                </div>    
+
+                <div class="modal-footer" id="invoice-footer">
+                    <button class="butn" id="showtoasts">     
+
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
 
         <div class="col-xl-3 col-lg-4 col-md-5 col-12" id="invoice-col">
 
@@ -316,44 +352,6 @@
 
             </div>
         </div>
-
-        <div class="col-xl-9 col-lg-8 col-md-7 col-12" id="invoice-col-table">
-            <div class="modal-content" id="invoice-table">
-                <div class="modal-body" id="invoice-table-div">
-                    <div class="table-responsive">
-                        <table id="example1" class="display table table-bordered table-hover table-striped" style="width: 100%;">
-                            <thead>
-                                <tr class="table-primary">
-                                    <th>Bank</th>
-                                    <th>Balance</th>
-                                    <th>Account</th>
-                                    <th class="remove-th"><i class="fas fa-trash"></i></th>
-                                    <th>Price</th>
-                                    <th>Info1</th>
-                                    <th>Info2</th>
-                                    <th>Info3</th>
-                                    <th>Info4</th>
-                                    <th>Info5</th>
-                                    <th>Info6</th>
-                                    <th>Link</th>
-                                </tr>
-                            </thead>
-                            <tbody class="champez">
-                                
-                            </tbody>                                        
-                        </table>                        
-                    </div> 
-                </div>    
-
-                <div class="modal-footer" id="invoice-footer">
-                    <button class="butn" id="showtoasts">     
-
-                    </button>
-                </div>
-
-            </div>
-        </div>
-
 
     </div>
     </div>
@@ -559,8 +557,6 @@
     <script src="js/cart/timer.js"></script>
     <script src="js/main/core.invoice.js"></script>
     <script src="js/main/invoice.js"></script>
-    <script src="js/invoice/xzoom.js"></script>
-    <script src="js/invoice/setup.js"></script>
 
     <script src="js/pages/table-data.js"></script>
     <script src="datatables/js/jquery.datatable2.min.js"></script> 
