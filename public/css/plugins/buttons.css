@@ -1339,9 +1339,19 @@ td {
     font-size: 19px !important;
   }
   .thegold img {
+    height: 52px !important;
+    width: 52px !important;
+    margin-right: 7px !important;
+  }
+}
+@media (max-width: 395px) {
+  .thegold img {
     height: 49px !important;
     width: 49px !important;
-    margin-right: 7px !important;
+  }
+  .thegold a {
+    font-size: 17px;
+    padding: 9px 0 !important;
   }
 }
 @media (max-width: 370px) {
