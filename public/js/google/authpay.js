@@ -81,12 +81,22 @@ auth.onAuthStateChanged(user => {
 		theMail.value = '**Logged in anonymously**';
 		labelMail.innerText = "Your Email:";
 
+		document.getElementById('logsection').style.display = 'none';
+		document.getElementById('logsection2').style.display = 'none';
+		document.getElementById('predat').style.display = 'none';
+		document.getElementById('anon-login').style.display = 'flex';
+
 	} else if(user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = 'Anonymous';
 		theMail.value = '**Logged in anonymously**';
 		labelMail.innerText = "Your Email:";
+
+		document.getElementById('logsection').style.display = 'none';
+		document.getElementById('logsection2').style.display = 'none';
+		document.getElementById('predat').style.display = 'none';
+		document.getElementById('anon-login').style.display = 'flex';
 
 	} 
 
