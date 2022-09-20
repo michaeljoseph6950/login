@@ -2257,3 +2257,6 @@ ul.countdown li p {
 #tele-contact {
   color: #121d33 !important;
 }
+#logout-li {
+  display: none !important;
+}
