@@ -177,6 +177,7 @@ blink.high {
 .lesnar {
   border: 1.4px solid #49c0d0;
 }
+.navbar-nav li.nav-small a,
 .butn.gold {
   border: 1.4px solid rgba(73, 192, 208, 0.8);
   background: rgb(219, 242, 246);
