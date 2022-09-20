@@ -1836,6 +1836,7 @@ td {
   background-color: transparent !important;
   font-size: 22px;
   text-align: center !important;
+  border-radius: 0 !important;
 }
 @media screen and (max-width: 375px) {
   #jinaHolder3 {
