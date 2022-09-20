@@ -80,30 +80,18 @@ auth.onAuthStateChanged(user => {
 		jinaHolder3.value = user.displayName;
 		theMail.value = '**Logged in anonymously**';
 		labelMail.innerText = "Your Email:";
-
-		document.getElementById('logsection').style.display = 'none';
-		document.getElementById('logsection2').style.display = 'none';
-		document.getElementById('predat').style.display = 'none';
-		document.getElementById('anon-login').style.display = 'flex';
-
 	} else if(user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = 'Anonymous';
 		theMail.value = '**Logged in anonymously**';
 		labelMail.innerText = "Your Email:";
-
-		document.getElementById('logsection').style.display = 'none';
-		document.getElementById('logsection2').style.display = 'none';
-		document.getElementById('predat').style.display = 'none';
-		document.getElementById('anon-login').style.display = 'flex';
-
 	} 
 
 	if(user.uid){
 		theId.value = user.uid;
 		theDate.value = new Date(user.metadata.b * 1);
-		document.getElementById('showtoasts').focus();
+		// document.getElementById('showtoasts').focus();
 	}
 
 });
