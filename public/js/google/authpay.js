@@ -48,7 +48,6 @@ auth.onAuthStateChanged(user => {
 	if (user.displayName && user.email) {
 		jinaHolder.value = user.displayName;
 		jinaHolder3.value = user.displayName;
-		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
 		theMail.value = user.email;
@@ -59,7 +58,6 @@ auth.onAuthStateChanged(user => {
 
 		jinaHolder.value = theaddress;
 		jinaHolder3.value = theaddress;
-		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
 		theMail.value = user.email;
@@ -68,21 +66,18 @@ auth.onAuthStateChanged(user => {
 		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = user.displayName;
-		jinaHolder3.focus();
 		theMail.value = user.phoneNumber;
 		labelMail.innerText = "Your Phone Number:";
 	}  else if(user.phoneNumber && !user.displayName) {
 		jinaHolder.value = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = user.phoneNumber;
-		jinaHolder3.focus();
 		theMail.value = user.phoneNumber;
 		labelMail.innerText = "Your Phone Number:";
 	} else if(user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = user.displayName;
-		jinaHolder3.focus();
 		theMail.value = '**Logged in anonymously**';
 		labelMail.innerText = "Your Email:";
 
@@ -95,7 +90,6 @@ auth.onAuthStateChanged(user => {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = 'Anonymous';
-		jinaHolder3.focus();
 		theMail.value = '**Logged in anonymously**';
 		labelMail.innerText = "Your Email:";
 
@@ -109,6 +103,7 @@ auth.onAuthStateChanged(user => {
 	if(user.uid){
 		theId.value = user.uid;
 		theDate.value = new Date(user.metadata.b * 1);
+		document.getElementById('showtoasts').focus();
 	}
 
 });

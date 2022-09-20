@@ -53,7 +53,6 @@ auth.onAuthStateChanged(user => {
 	if (user.displayName && user.email) {
 		jinaHolder.value = user.displayName;
 		jinaHolder3.value = user.displayName;
-		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = user.displayName;
 		nameHolder2.value = user.displayName;
@@ -75,7 +74,6 @@ auth.onAuthStateChanged(user => {
 
 		jinaHolder.value = theaddress;
 		jinaHolder3.value = theaddress;
-		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = theaddress;
 		nameHolder2.value = theaddress;
@@ -94,7 +92,6 @@ auth.onAuthStateChanged(user => {
 	} if (user.phoneNumber && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder3.value = user.displayName;
-		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = user.displayName;
 		nameHolder2.value = user.displayName;
@@ -113,7 +110,6 @@ auth.onAuthStateChanged(user => {
 	}  if (user.phoneNumber && !user.displayName) {
 		jinaHolder.value = user.phoneNumber;
 		jinaHolder3.value = user.phoneNumber;
-		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = user.phoneNumber;
 		nameHolder2.value = user.phoneNumber;
@@ -132,7 +128,6 @@ auth.onAuthStateChanged(user => {
 	} else 	if (user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder3.value = user.displayName;
-		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = user.displayName;
 		nameHolder2.value = user.displayName;
@@ -151,7 +146,6 @@ auth.onAuthStateChanged(user => {
 	} else 	if (user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder3.value = 'Anonymous';
-		jinaHolder3.focus();
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		nameHolder1.value = 'Anonymous';
 		nameHolder2.value = 'Anonymous';
