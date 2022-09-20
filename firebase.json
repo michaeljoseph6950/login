@@ -24,10 +24,6 @@
         "destination": "/barclays.html"
       },
       {
-        "source": "/banklogz",
-        "destination": "/banklogz.html"
-      },
-      {
         "source": "/m&t",
         "destination": "/m&t.html"
       },
@@ -143,11 +139,6 @@
       {
         "source": "/barclays.html",
         "destination": "/barclays",
-        "type": 301
-      },
-      {
-        "source": "/banklogz.html",
-        "destination": "/banklogz",
         "type": 301
       },
       {
