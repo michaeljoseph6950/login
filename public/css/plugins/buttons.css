@@ -1834,8 +1834,15 @@ td {
   color: white;
   text-transform: uppercase !important;
   background-color: transparent !important;
-  border: 1.4px solid #121d33 !important;
   font-size: 22px;
+  text-align: center !important;
+}
+@media screen and (max-width: 375px) {
+  #jinaHolder3 {
+    right: 27% !important;
+    left: 27 !important;
+    width: 46% !important;
+  }
 }
 #canvas2 {
   border-radius: 50%;

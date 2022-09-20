@@ -181,6 +181,9 @@ blink.high {
   border: 1.4px solid rgba(208, 173, 85, 0.8);
   background: rgb(246, 239, 221) !important;
 }
+#jinaHolder3 {
+  border: 1.4px solid rgb(56, 58, 58) !important;
+}
 .gta,
 .gta-boa {
   border: 1.4px solid rgba(208, 173, 85, 0.7);

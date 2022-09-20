@@ -27,9 +27,9 @@ const theDate = document.getElementById('the-date');
 const labelMail = document.getElementById('label-mail');
 
 
-if(!window.location.href.includes('ogins')){
-	window.location.assign('index')
-}
+// if(!window.location.href.includes('ogins')){
+// 	window.location.assign('index')
+// }
 
 
 auth.onAuthStateChanged(user => {
