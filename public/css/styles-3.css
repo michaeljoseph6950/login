@@ -179,6 +179,7 @@ blink.high {
 }
 .gold {
   border: 1.4px solid rgba(0, 115, 173, 0.8);
+  background: rgb(204, 227, 239) !important;
 }
 
 .gta,
