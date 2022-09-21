@@ -121,41 +121,7 @@ auth.onAuthStateChanged(user => {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
 		}
-	} else 	if (user.isAnonymous && user.displayName) {
-		jinaHolder.value = user.displayName;
-		jinaHolder3.value = user.displayName;
-		jinaHolder2.innerText = 'User ID: ' + user.uid;
-		nameHolder1.value = user.displayName;
-		nameHolder2.value = user.displayName;
-		nameHolder3.value = user.displayName;
-
-		email2.innerHTML = `Use <strong>winrar software</strong> to extract bank log files from <strong>.zip</strong> format`;
-		email5.innerHTML = `Logged in anonymously, you can link a valid email address on the confirm page to get an email invoice`;
-
-		if (localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)) {
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for (var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
-			}
-		}
-	} else 	if (user.isAnonymous && !user.displayName) {
-		jinaHolder.value = 'Anonymous';
-		jinaHolder3.value = 'Anonymous';
-		jinaHolder2.innerText = 'User ID: ' + user.uid;
-		nameHolder1.value = 'Anonymous';
-		nameHolder2.value = 'Anonymous';
-		nameHolder3.value = 'Anonymous';
-
-		email2.innerHTML = `Use <strong>winrar software</strong> to extract bank log files from <strong>.zip</strong> format`;
-		email5.innerHTML = `Logged in anonymously, you can link a valid email address on the confirm page to get an email invoice`;
-
-		if (localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)) {
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for (var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
-			}
-		}
-	}
+	} 
 
 	if(user.uid){
 		theId.value = user.uid;
@@ -174,27 +140,6 @@ auth.onAuthStateChanged(user => {
 		`
 	}
 });
-
-const logOut = document.getElementById('logout');
-logOut.addEventListener('click', () => {
-    if(auth.currentUser.isAnonymous) {
-		auth.currentUser.delete()
-			.then(() => {
-				window.location.assign('index');
-			})
-			.catch(error => {
-				console.error(error);
-			})
-	} else {
-		auth.signOut()
-			.then(() => {
-				window.location.assign('index');
-			})
-			.catch(error => {
-				console.error(error);
-			})
-	}
-})
 
 
 jinaHolder.addEventListener("change", () => {

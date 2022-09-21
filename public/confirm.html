@@ -219,19 +219,6 @@
                                     Woodforest Bank
                                 </a>
                             </li>
-
-                            <li class="thegold" id="tele-li">
-                                <img src="img/partners/telegram.png">
-                                <a class="butn gold" href="https://t.me/carl97" target="_blank" id="tele-contact">
-                                    Telegram @carl97
-                                </a>
-                            </li>
-                            <li class="thegold" id="logout-li">
-                                <img src="img/partners/logout.png">
-                                <a class="butn gold"  id="logout">
-                                    Sign Out & Exit
-                                </a>
-                            </li>
                             
                         </ul>
                     </li>
@@ -311,29 +298,6 @@
                     </div>
                 </div>
 
-
-                <div id="anon-invoice">
-                    <div class="text-center section-heading">
-                        <h4>
-                            Bank Logs Invoice
-                        </h4>
-                        <p>
-                            Would you like to get bank logs details sent via email, 
-                            or via sms as a dynamic link that expires after 7 hours?
-                        </p>
-                        <a class="butn home-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
-                            Link Email Address
-                            <img src="img/partners/mail.png">
-                        </a>
-
-                        <a class="butn anon-btn" data-bs-toggle="modal" data-bs-target="#phoneModal">
-                            Link Phone Number
-                            <img src="img/partners/pho.jpg">
-                        </a>
-
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
@@ -367,112 +331,6 @@
 <a class="scroll-to-top">
     <i class="fas fa-angle-up"></i>
 </a>
-
-
-<div class="modal fade"  id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="section-heading">
-                    <h4>
-                        Link Email Address
-                    </h4>
-                </div>
-                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <p class="modal-p">
-                    A link will be sent to the email you input below 👇🏼👇🏼.
-                    <br>
-                    Click on that link to login to the website.
-                    <br>
-                </p>
-                <form id="the-form">
-                    <div class="form-group col-md-12">
-                        <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter Your Email..." required>
-                    </div>
-                    <li class="next">
-                        <button type="submit" class="butn home-btn" id="signUp">
-                            Get Verification Link
-                            <img src="img/partners/check.png">
-                        </button>
-                    </li>
-                </form>
-            </div>
-        </div>
-    </div>   
-</div>
-
-
-<div class="modal fade"  id="phoneModal" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="section-heading">
-                    <h4>
-                        Link Phone Number
-                    </h4>
-                </div>
-                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <p class="modal-p">
-                    A verification code will be sent to the phone number you input below 👇🏼 👇🏼.
-                    Use that code to login to the website
-                </p>
-                <form id="myform">
-                    <div class="form-group col-md-12">
-                        <div id="the-div">
-                            <img id="the-flag" />
-                            <input type="tel" id="phoneNumber" class="form-control" placeholder="Enter Phone Number..." name="phone" pattern="[+]{1}[0-9]{11,14}" required />
-                        </div>
-                        <div id="recaptcha-container"></div>
-                    </div>
-
-                    <li class="next" id="next-btn">
-                        <button type="submit" class="butn home-btn" id="getCode">
-                            Get Verification Code
-                            <img src="img/partners/check.png">
-                        </button>
-                    </li>
-                </form>
-            </div>
-        </div>
-    </div>   
-</div>
-
-
-
-<div class="modal fade"  id="coModal" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="section-heading">
-                    <h4>
-                        Verification Code
-                    </h4>
-                </div>
-                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <p class="modal-p">
-                    Check your phone messages, and enter the code received.
-                </p>
-                <div class="form-group col-md-12">
-                    <input type="text" required maxlength="7" class="form-control" id="code" placeholder="Enter Verification Code...">
-                </div>
-                <li class="next" id="next-btn">
-                    <button type="submit" class="butn home-btn" id="signInWithPhone">
-                        Verify Code
-                        <img src="img/partners/check.png">
-                    </button>
-                </li>
-            </div>
-        </div>
-    </div>   
-</div>
-
-
 
 
 <div class="modal fade" id="profileModal" data-bs-backdrop="static" data-bs-keyboard="false">
