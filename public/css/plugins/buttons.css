@@ -1510,16 +1510,16 @@ td {
 #loginModal .modal-backdrop div p, #phoneModal .modal-backdrop div p, #coModal .modal-backdrop div p, #vpnModal .modal-body div p, #exampleModal .modal-body div p {
   background: transparent !important;
 }
-#loginModal .modal-body, #phoneModal .modal-body, #coModal .modal-body, #vpnModal .modal-body {
+#loginModal .modal-body, #phoneModal .modal-body, #coModal .modal-body {
   text-align: center !important;
 }
 @media screen and (min-width: 1025px) {
   #vpnModal .modal-content{
     max-width: 28vw !important;
   }
-  #vpnModal .modal-body label {
-    text-align: left !important;
-  }
+}
+#vpnModal .modal-body {
+  padding: 0 7px !important;
 }
 .brock {
   text-align: center !important;

@@ -154,6 +154,10 @@
 #list .bro:hover .bro-text{
 	opacity:1 !important 
 }
+#vpnModal .modal-body {
+	padding: 0 7px !important;
+	text-align: center !important;
+}
 
 
   
