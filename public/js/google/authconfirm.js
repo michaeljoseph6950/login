@@ -19,6 +19,16 @@ const yourPhone = document.getElementById('yourPhone');
 
 const emailInvoice = document.getElementById('email-invoice');
 const phoneInvoice = document.getElementById('phone-invoice');
+const anonInvoice = document.getElementById('anon-invoice');
+
+
+const mailField = document.getElementById('exampleInputEmail');
+const signUp = document.getElementById('signUp');
+
+const phoneNumberField = document.getElementById('phoneNumber');
+const codeField = document.getElementById('code');
+const signInWithPhoneButton = document.getElementById('signInWithPhone');
+const getCodeButton = document.getElementById('getCode');
 
 
 const auth = firebase.auth();
@@ -56,6 +66,14 @@ auth.onAuthStateChanged(user => {
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		phoneInvoice.style.display = 'flex';
 		yourPhone.innerText = user.phoneNumber;
+	} else	if (user.isAnonymous && user.displayName) {
+		jinaHolder.value = user.displayName;
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+		anonInvoice.style.display = 'flex';
+	} else	if (user.isAnonymous && !user.displayName) {
+		jinaHolder.value = 'Anonymous';
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+		anonInvoice.style.display = 'flex';
 	}
 });
 

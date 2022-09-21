@@ -54,7 +54,6 @@ auth.onAuthStateChanged(user => {
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
 		theMail.value = user.email;
-		labelMail.innerText = "Your Email:";
 
 		theMail.style.width = '100%';
 		signUp.style.display = 'none';
@@ -68,7 +67,6 @@ auth.onAuthStateChanged(user => {
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
 		theMail.value = user.email;
-		labelMail.innerText = "Your Email:";
 
 		theMail.style.width = '100%';
 		signUp.style.display = 'none';
@@ -93,6 +91,18 @@ auth.onAuthStateChanged(user => {
 		theMail.style.width = '100%';
 		signUp.style.display = 'none';
 		theMail.readOnly = true;
+	} else if(user.isAnonymous && user.displayName) {
+		jinaHolder.value = user.displayName;
+		jinaHolder3.value = user.displayName;
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+
+		theMail.addEventListener('click', clearField);
+	} else if(user.isAnonymous && !user.displayName) {
+		jinaHolder.value = 'Anonymous';
+		jinaHolder3.value = 'Anonymous';
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+
+		theMail.addEventListener('click', clearField);
 	} 
 
 	if(user.uid){

@@ -41,7 +41,13 @@ auth.onAuthStateChanged(user => {
 	} else if(user.phoneNumber && !user.displayName) {
 		jinaHolder.value = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
-	} 
+	} else if(user.isAnonymous && user.displayName) {
+		jinaHolder.value = user.displayName;
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+	} else if(user.isAnonymous && !user.displayName) {
+		jinaHolder.value = 'Anonymous';
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+	}
 });
 
 
