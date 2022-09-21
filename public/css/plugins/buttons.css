@@ -1521,6 +1521,9 @@ td {
 #vpnModal .modal-body {
   padding: 0 7px !important;
 }
+#vpnModal .change-div2 {
+  margin-bottom: 14px !important;
+}
 .brock {
   text-align: center !important;
 }
