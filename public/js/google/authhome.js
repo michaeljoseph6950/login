@@ -175,6 +175,7 @@ jinaHolder.addEventListener("change", () => {
 	})
 	.then(() => {
 		alert('Display Name Updated Successfully !');
+		jinaHolder3.value = jinaHolder.value
 	})
 	.catch(error => {
 		jinaHolder.focus();
