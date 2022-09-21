@@ -137,3 +137,10 @@
 #vpnModal .modal-body p span {
     color: yellow !important;
 }
+
+.modal-p {
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    padding: 5px -5px !important;
+    line-height: 30px !important;
+  }
