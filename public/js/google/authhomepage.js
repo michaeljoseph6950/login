@@ -201,27 +201,6 @@ jinaHolder3.addEventListener("change", () => {
 	})
 });
 
-const logOut = document.getElementById('logout');
-logOut.addEventListener('click', () => {
-    if(auth.currentUser.isAnonymous) {
-		auth.currentUser.delete()
-			.then(() => {
-				window.location.assign('index');
-			})
-			.catch(error => {
-				console.error(error);
-			})
-	} else {
-		auth.signOut()
-			.then(() => {
-				window.location.assign('index');
-			})
-			.catch(error => {
-				console.error(error);
-			})
-	}
-})
-
 var d = new Date();
 var n = d.getMonth() + 1;
 var y = d.getFullYear();

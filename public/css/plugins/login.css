@@ -392,7 +392,7 @@ blink.high {
   font-size: 24px;
   line-height: 35px;
   white-space: nowrap !important;
-  padding: 10px 15px;
+  padding: 10px 5px;
 }
 
 @media screen and (max-width: 376px) {
@@ -452,7 +452,7 @@ blink.high {
 .modal-p {
   font-size: 17px !important;
   font-weight: 500 !important;
-  padding: 5px !important;
+  padding: 5px -5px !important;
   line-height: 30px !important;
 }
 
