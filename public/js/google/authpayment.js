@@ -207,36 +207,6 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 jinaHolder.addEventListener("change", () => {
 	auth.currentUser.updateProfile({
 		displayName: jinaHolder.value
@@ -269,10 +239,10 @@ fetch('https://ipapi.co/json/')
 		return response.json();
 	})
 	.then(function(data) {
-		document.getElementById('footer-email').innerHTML = `
-		Your IP address: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}, ${data.country_calling_code}
-		<img src="https://countryflagsapi.com/png/${data.country_code}" id="the-flag" />
-    `;
+		document.getElementById('label-ip').innerHTML = `
+			IP address: <span>${data.ip}</span> ${data.country_calling_code} <img src="https://countryflagsapi.com/png/${data.country_code}" id="the-flag" />
+		`;
+		document.getElementById('the-ip').value = `${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
 	});
 
 document.getElementById("thebodyz").oncontextmenu = function() {

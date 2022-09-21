@@ -1513,6 +1513,14 @@ td {
 #loginModal .modal-body, #phoneModal .modal-body, #coModal .modal-body, #vpnModal .modal-body {
   text-align: center !important;
 }
+@media screen and (min-width: 1025px) {
+  #vpnModal .modal-content{
+    max-width: 28vw !important;
+  }
+  #vpnModal .modal-body label {
+    text-align: left !important;
+  }
+}
 .brock {
   text-align: center !important;
 }
@@ -1814,7 +1822,7 @@ td {
     margin: 10px 2px;
  }
 }
-#the-id, #the-date, #the-name, #the-mail, #nameBro1, #nameBro2, #nameBro3, #textBro {
+#the-id, #the-date, #the-ip, #the-name, #the-mail, #nameBro1, #nameBro2, #nameBro3, #textBro {
   font-size: 17px !important;
   color: rgba(255, 255, 255, 0.81) !important;
   font-weight: 600;
@@ -1847,6 +1855,9 @@ td {
   font-size: 22px;
   text-align: center !important;
   border-radius: 0 !important;
+  border: 1.4px solid rgba(255, 255, 255, 0.03) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 @media screen and (max-width: 375px) {
   #jinaHolder3 {
