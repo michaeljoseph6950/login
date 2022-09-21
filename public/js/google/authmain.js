@@ -229,7 +229,7 @@ fetch('https://ipapi.co/json/')
 	})
 	.then(function(data) {
 		document.getElementById('label-ip').innerHTML = `
-			IP address: <span>${data.ip}</span> ${data.country_calling_code} <img src="https://countryflagsapi.com/png/${data.country_code}" id="the-flag" />
+			Your IP address: <span>${data.ip}</span> ${data.country_calling_code} <img src="https://countryflagsapi.com/png/${data.country_code}" id="the-flag" />
 		`;
 		document.getElementById('the-ip').value = `${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
 	});
