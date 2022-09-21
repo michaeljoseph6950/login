@@ -302,6 +302,8 @@ blink.high {
 .thehr {
   border: 0.7px solid rgba(250, 183, 2, 0.3);
 }
+#tele-contact,
+#logout,
 #vpn {
   border: 1.4px solid rgba(250, 183, 2, 0.81);
   background: rgba(250, 183, 2, 0.52);
