@@ -58,7 +58,6 @@ auth.onAuthStateChanged(user => {
 		nameHolder2.value = user.displayName;
 		nameHolder3.value = user.displayName;
 
-		email1.innerHTML = `Check your email spam/junk folder @:<strong>${user.email}</strong> after buying a bank log`;
 		email2.innerHTML = `Use <strong>winrar software</strong> to extract bank log files from <strong>.zip</strong> format`;
 		email5.innerHTML = user.email;
 
@@ -79,7 +78,6 @@ auth.onAuthStateChanged(user => {
 		nameHolder2.value = theaddress;
 		nameHolder3.value = theaddress;
 
-		email1.innerHTML = `Check your email spam/junk folder @:<strong>${user.email}</strong> after buying a bank log`;
 		email2.innerHTML = `Use <strong>winrar software</strong> to extract bank log files from <strong>.zip</strong> format`;
 		email5.innerHTML = user.email;
 
@@ -97,7 +95,6 @@ auth.onAuthStateChanged(user => {
 		nameHolder2.value = user.displayName;
 		nameHolder3.value = user.displayName;
 
-		email1.innerHTML = `Check your text messages inbox ${user.phoneNumber}, for a link after buying any bank log`;
 		email2.innerHTML = `Use <strong>winrar software</strong> to extract bank log files from <strong>.zip</strong> format`;
 		email5.innerHTML = `Logged in with phone number ${user.phoneNumber}, you'll have to check your text messages for a link after buying any bank log`;
 
@@ -115,7 +112,6 @@ auth.onAuthStateChanged(user => {
 		nameHolder2.value = user.phoneNumber;
 		nameHolder3.value = user.phoneNumber;
 
-		email1.innerHTML = `Check your text messages inbox ${user.phoneNumber}, for a link after buying any bank log`;
 		email2.innerHTML = `Use <strong>winrar software</strong> to extract bank log files from <strong>.zip</strong> format`;
 		email5.innerHTML = `Logged in with phone number ${user.phoneNumber}, you'll have to check your text messages for a link after buying any bank log`;
 
@@ -133,7 +129,6 @@ auth.onAuthStateChanged(user => {
 		nameHolder2.value = user.displayName;
 		nameHolder3.value = user.displayName;
 
-		email1.innerHTML = `Bank log files can only be downloaded <strong>ONCE</strong>, save them in a folder you won't forget`;
 		email2.innerHTML = `Use <strong>winrar software</strong> to extract bank log files from <strong>.zip</strong> format`;
 		email5.innerHTML = `Logged in anonymously, you can link a valid email address on the confirm page to get an email invoice`;
 
@@ -151,7 +146,6 @@ auth.onAuthStateChanged(user => {
 		nameHolder2.value = 'Anonymous';
 		nameHolder3.value = 'Anonymous';
 
-		email1.innerHTML = `Bank log files can only be downloaded <strong>ONCE</strong>, save them in a folder you won't forget`;
 		email2.innerHTML = `Use <strong>winrar software</strong> to extract bank log files from <strong>.zip</strong> format`;
 		email5.innerHTML = `Logged in anonymously, you can link a valid email address on the confirm page to get an email invoice`;
 
@@ -166,6 +160,18 @@ auth.onAuthStateChanged(user => {
 	if(user.uid){
 		theId.value = user.uid;
 		theDate.value = new Date(user.metadata.b * 1);
+	}
+
+	if(platform.manufacturer !== null) {
+		email1.innerHTML = `
+		Bank log files will be saved on your <strong>${platform.manufacturer} 
+		${platform.product} ${platform.os}</strong> Downloads folder
+		`
+	} else {
+		email1.innerHTML = `
+		Bank log files will be saved on your <strong>${platform.os}</strong> 
+		Downloads folder from <strong>${platform.name}</strong> web browser 
+		`
 	}
 });
 
