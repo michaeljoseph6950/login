@@ -99,14 +99,24 @@ auth.onAuthStateChanged(user => {
 		jinaHolder3.value = user.displayName;
 		labelMail.innerText = "Your Email:";
 
-		theMail.addEventListener('click', clearField)
+		theMail.addEventListener('click', clearField);
+
+		document.getElementById('anon-login').style.display = 'flex';
+		document.getElementById('logsection').style.display = 'none';
+		document.getElementById('logsection2').style.display = 'none';
+		document.getElementById('predat').style.display = 'none';
 	} else if(user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = 'Anonymous';
 		labelMail.innerText = "Your Email:";
 
-		theMail.addEventListener('click', clearField)
+		theMail.addEventListener('click', clearField);
+
+		document.getElementById('anon-login').style.display = 'flex';
+		document.getElementById('logsection').style.display = 'none';
+		document.getElementById('logsection2').style.display = 'none';
+		document.getElementById('predat').style.display = 'none';
 	} 
 
 	if(user.uid){
