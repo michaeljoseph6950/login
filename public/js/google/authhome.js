@@ -230,8 +230,7 @@ document.getElementById('photo2').addEventListener('change', (event) => {
 				</div>
 				<div class="bro-text">
 					<p>Uploaded on: ${n}/${m}/${y}</p>
-					<p>Ticket ID: Tcr#4930</p>
-					<p>User ID: <span>${auth.currentUser.uid}</span></p>
+					<p>Ticket ID: Tcr#4830</p>
 				</div>
 			</div>
 		`;
@@ -260,8 +259,7 @@ function displayImage(row, images) {
 				</div>
 				<div class="bro-text">
 					<p>Uploaded on: ${n}/${m}/${y}</p>
-					<p>Ticket ID: Tcr#4930</p>
-					<p>User ID: <span>65mhzqN7lsU1Sd4XBLdZaNYfUID3</span></p>
+					<p>Ticket ID: Tcr#4830</p>
 				</div>
 			</div>
 		`;
