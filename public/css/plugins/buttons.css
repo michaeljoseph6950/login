@@ -1463,21 +1463,21 @@ td {
     max-height:45% !important;
  }
 }
-#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog {
+#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
   top: 4.2vh !important;
 }
 @media screen and (max-width: 821px) {
-  #loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog {
+  #loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
     top: 17vh !important;
  }
 }
 @media screen and (max-width: 769px) {
-  #loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog {
+  #loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
     top: 15vh !important;
  }
 }
 @media screen and (max-width: 570px) {
-  #loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog {
+  #loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
     top: 14vh !important;
     max-width: 87vw !important;
  }
@@ -1490,39 +1490,39 @@ td {
 .jina-div {
   display: grid;
 }
-#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog {
+#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog,  #acModal .modal-dialog {
   background: transparent !important;
 }
-#loginModal .modal-header, #phoneModal .modal-header, #coModal .modal-header, #vpnModal .modal-header, #exampleModal .modal-header {
+#loginModal .modal-header, #phoneModal .modal-header, #coModal .modal-header, #vpnModal .modal-header, #exampleModal .modal-header,  #acModal .modal-header {
   margin: 2px;
   padding: 0;
   border-bottom: none;
 }
-#loginModal .modal-header img, #phoneModal .modal-header img, #coModal .modal-header img, #vpnModal .modal-header img, #exampleModal .modal-header img {
+#loginModal .modal-header img, #phoneModal .modal-header img, #coModal .modal-header img, #vpnModal .modal-header img, #exampleModal .modal-header img,  #acModal .modal-header img {
   width: 70px;
 }
-#loginModal .modal-header h4.modal-title, #phoneModal .modal-header h4.modal-title, #coModal .modal-header h4.modal-title, #vpnModal .modal-header h4.modal-title, #exampleModal .modal-header h4.modal-title {
+#loginModal .modal-header h4.modal-title, #phoneModal .modal-header h4.modal-title, #coModal .modal-header h4.modal-title, #vpnModal .modal-header h4.modal-title, #exampleModal .modal-header h4.modal-title, #acModal .modal-header h4.modal-title {
   font-weight: 600;
 }
-#loginModal .modal-header .close img, #phoneModal .modal-header .close img, #coModal .modal-header .close img, #vpnModal .modal-header .close img, #exampleModal .modal-header .close img {
+#loginModal .modal-header .close img, #phoneModal .modal-header .close img, #coModal .modal-header .close img, #vpnModal .modal-header .close img, #exampleModal .modal-header .close img,  #acModal .modal-header .close img {
   width: 30px;
   opacity: 0.7;
   border-radius: 50%;
 }
-#loginModal .modal-header .close img:hover, #phoneModal .modal-header .close img:hover, #coModal .modal-header .close img:hover, #vpnModal .modal-header .close img:hover, #exampleModal .modal-header .close img:hover {
+#loginModal .modal-header .close img:hover, #phoneModal .modal-header .close img:hover, #coModal .modal-header .close img:hover, #vpnModal .modal-header .close img:hover, #exampleModal .modal-header .close img:hover,  #acModal .modal-header .close img:hover {
   opacity: 1 !important;
 }
-#loginModal .modal-footer, #phoneModal .modal-footer, #coModal .modal-footer, #vpnModal .modal-footer, #exampleModal .modal-footer {
+#loginModal .modal-footer, #phoneModal .modal-footer, #coModal .modal-footer, #vpnModal .modal-footer, #exampleModal .modal-footer, #acModal .modal-footer {
   margin: 4px;
   border-top: none;
   padding: 0;
 }
-#loginModal .modal-body, #phoneModal .modal-body, #coModal .modal-body, #vpnModal .modal-body, #exampleModal .modal-body {
+#loginModal .modal-body, #phoneModal .modal-body, #coModal .modal-body, #vpnModal .modal-body, #exampleModal .modal-body, #acModal .modal-body  {
   margin: 0;
   padding: 0;
   background: transparent !important;
 }
-#loginModal .modal-backdrop div p, #phoneModal .modal-backdrop div p, #coModal .modal-backdrop div p, #vpnModal .modal-body div p, #exampleModal .modal-body div p {
+#loginModal .modal-backdrop div p, #phoneModal .modal-backdrop div p, #coModal .modal-backdrop div p, #vpnModal .modal-body div p, #exampleModal .modal-body div p,  #acModal .modal-body div p {
   background: transparent !important;
 }
 #loginModal .modal-body, #phoneModal .modal-body, #coModal .modal-body {
