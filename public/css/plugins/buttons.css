@@ -2109,6 +2109,8 @@ ul.countdown li p {
 #vpn img {
   width: 27px;
 }
+#logout,
+#tele-contact,
 #vpn-nav {
   color: rgba(18, 29, 51, 1);
   cursor: pointer;
@@ -2302,7 +2304,7 @@ ul.countdown li p {
     width: 31%;
  }
 }
-
+.ticketz label,
 #vpnModal label {
   font-size: 16.3px !important;
   margin-top: 10px !important;
