@@ -2300,3 +2300,8 @@ ul.countdown li p {
 #label-mail {
   margin-bottom: 10px !important;
 }
+
+#logout-li,
+#tele-li {
+  display: none !important;
+}
