@@ -1925,6 +1925,7 @@ td {
 .add-task {
   margin: 0 auto !important;
   padding: 30px 21px !important;
+  color: #fff !important;
   font-size: 21.3px !important;
   width: auto !important;
   background: rgba(18, 29, 51, 0.5) !important;

@@ -407,3 +407,7 @@ $(document).ready(function() {
     $('#example').dataTable();    
     $('#example2').dataTable();    
 });
+
+function clearInput() {
+    document.getElementById('todo-input').value = ''
+}
