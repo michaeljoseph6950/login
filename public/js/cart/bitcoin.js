@@ -4,14 +4,7 @@ window.addEventListener("load", () => {
 
   binance.onmessage = event => {
     let confirm = JSON.parse(event.data);
-      if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
-        bitcoin.innerHTML = `
-          <i class="fas fa-spin fa-sync-alt spinner-bordez"></i> awaiting 
-          <span id="the-one">
-            ${(localStorage.getItem('banktotal') / parseFloat(confirm.k.c)).toFixed(5)}
-          </span> bitcoin payment
-        `;
-      } else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 1)){
+      if(localStorage.getItem('banklogs')){
         bitcoin.innerHTML = `
           <i class="fas fa-spin fa-sync-alt spinner-bordez"></i> awaiting 
           <span id="the-one">
