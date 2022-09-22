@@ -252,6 +252,7 @@ blink.high {
 #loginModal .modal-content,
 #coModal .modal-content,
 #phoneModal .modal-content,
+#acModal .modal-content,
 #vpnModal .modal-content,
 #profileModal .modal-content,
 #exampleModal .modal-content {
@@ -281,6 +282,7 @@ blink.high {
 #loginModal .modal-header .close img,
 #phoneModal .modal-header .close img,
 #coModal .modal-header .close img,
+#acModal .modal-header .close img,
 #vpnModal .modal-header .close img,
 #profileModal .modal-header .close img,
 #exampleModal .modal-header .close img,
@@ -290,6 +292,7 @@ blink.high {
 #loginModal .modal-content,
 #coModal .modal-content,
 #phoneModal .modal-content,
+#acModal .modal-content,
 #vpnModal .modal-content,
 #exampleModal .modal-content {
   border: 1.4px solid rgba(208, 173, 85, 0.7) !important;
