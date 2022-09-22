@@ -1869,6 +1869,7 @@ td {
   text-align: center !important;
   border-radius: 0 !important;
   border: 1.4px solid rgba(255, 255, 255, 0.03) !important;
+  box-shadow: 0 1px 3px 0 #121d33 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
@@ -2224,6 +2225,10 @@ ul.countdown li p {
   #copy, #copy2 {
     width: 35%;
  }
+}
+
+#vpnModal #text2 {
+  box-shadow: 0 1px 3px 0 #121d33 !important;
 }
 #profile-pic2,
 #profile-pic {
