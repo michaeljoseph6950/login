@@ -114,6 +114,10 @@ a:active {
 .text-theme-color {
   color: #0073ad;
 }
+.add-task {
+  box-shadow: 0 1px 3px 0 #0073ad !important;
+  border: 0.7px solid #0073ad !important;
+}
 blink {
   background: #0073ad;
 }
