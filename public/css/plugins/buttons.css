@@ -2272,3 +2272,7 @@ ul.countdown li p {
 #tele-contact {
   color: #121d33 !important;
 }
+
+#vpnModal label {
+  font-size: 16px !important;
+}
