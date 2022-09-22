@@ -49,7 +49,7 @@ auth.onAuthStateChanged(user => {
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
         jinaHolder3.value = user.displayName;
 		paidText.innerHTML = `
-			The price of acquiring tools for spamming, and also the process itself is expensive, 
+			The cost of acquiring tools for spamming, and also the process itself is expensive, 
 			Send $70 to complete your download.
 			Do not close this page or navigate to any other page otherwise this progress will be lost
 			<br>
@@ -65,7 +65,7 @@ auth.onAuthStateChanged(user => {
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
         jinaHolder3.value = theaddress;
 		paidText.innerHTML = `
-			The price of acquiring tools for spamming, and also the process itself is expensive, 
+			The cost of acquiring tools for spamming, and also the process itself is expensive, 
 			Send $70 to complete your download.
 			Do not close this page or navigate to any other page otherwise this progress will be lost
 			<br>
@@ -78,7 +78,7 @@ auth.onAuthStateChanged(user => {
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
         jinaHolder3.value = user.displayName;
 		paidText.innerHTML = `
-			The price of acquiring tools for spamming, and also the process itself is expensive, 
+			The cost of acquiring tools for spamming, and also the process itself is expensive, 
 			Send $70 to complete your download.
 			Do not close this page or navigate to any other page otherwise this progress will be lost
 			<br>
@@ -92,7 +92,7 @@ auth.onAuthStateChanged(user => {
         jinaHolder3.value = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		paidText.innerHTML = `
-			The price of acquiring tools for spamming, and also the process itself is expensive, 
+			The cost of acquiring tools for spamming, and also the process itself is expensive, 
 			Send $70 to complete your download.
 			Do not close this page or navigate to any other page otherwise this progress will be lost
 			<br>
@@ -106,7 +106,7 @@ auth.onAuthStateChanged(user => {
 		jinaHolder3.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		paidText.innerHTML = `
-			The price of acquiring tools for spamming, and also the process itself is expensive, 
+			The cost of acquiring tools for spamming, and also the process itself is expensive, 
 			Send $70 to complete your download.
 			Do not close this page or navigate to any other page otherwise this progress will be lost
 			<br>
@@ -119,7 +119,7 @@ auth.onAuthStateChanged(user => {
         jinaHolder3.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		paidText.innerHTML = `
-			The price of acquiring tools for spamming, and also the process itself is expensive, 
+			The cost of acquiring tools for spamming, and also the process itself is expensive, 
 			Send $70 to complete your download.
 			Do not close this page or navigate to any other page otherwise this progress will be lost
 			<br>
@@ -134,6 +134,8 @@ auth.onAuthStateChanged(user => {
 		theDate.innerHTML = new Date(user.metadata.b * 1);
 	}
 });
+
+document.getElementById('you-sent').innerText = '$' + localStorage.getItem('received-funds').toLocaleString();
 
 
 

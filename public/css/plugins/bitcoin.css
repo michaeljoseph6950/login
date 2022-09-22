@@ -36,8 +36,9 @@
 #paid div{
     overflow-y: hidden !important;
 }
-#paid .section-heading h4{
+#paid .section-heading h4 {
     color: #121d33;
+    font-size: 32px !important;
 }
 .butn.home-btn{
     margin-top: 7vh;
@@ -45,8 +46,10 @@
     font-size: 24px;
 }
 
-#paid-text span {
-    font-weight: 700;
+#paid-text {
+    color: rgba(18, 29, 51, 0.87) !important;
+    font-size: 16.5px !important;
+    line-height: 30px !important;
 }
 
 .butn.home-btn img {
@@ -57,8 +60,13 @@
 .paid-cart{
     background: rgba(255, 255, 255, 0.81);
     border: 7px solid rgba(135, 206, 235, 0.7) !important;
-    padding: 43px;
+    padding: 23px 10px;
     margin-top: 10vh !important;
+}
+@media screen and (max-width: 906px) {
+    .paid-cart {
+        margin-top: 5vh !important;
+    }
 }
 #you-sent {
     font-weight: 700;
