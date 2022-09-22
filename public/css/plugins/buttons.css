@@ -2259,9 +2259,9 @@ ul.countdown li p {
 #vpnModal #text2 {
   box-shadow: 0 1px 3px 0 #121d33 !important;
 }
-#profile-pic2,
-#profile-pic {
-  margin: 10px auto 3px !important;
+#upload-pic {
+  margin: 21px auto 3px !important;
+  width: 100%;
 }
 .custom-file-input~.custom-file-label[data-browse]::after {
   content: attr(data-browse);
