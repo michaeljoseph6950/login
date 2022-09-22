@@ -103,6 +103,7 @@ auth.onAuthStateChanged(user => {
 
 	} else 	if (user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
+		jinaHolder3.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		paidText.innerHTML = `
 			The price of acquiring tools for spamming, and also the process itself is expensive, 
