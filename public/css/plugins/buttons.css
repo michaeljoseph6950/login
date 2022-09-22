@@ -1293,6 +1293,9 @@ td {
     font-size: 22px;
     padding: 17px 0 !important;
   }
+  #vpn-nav {
+    font-size: 23px !important;
+  }
   #thetot {
     font-size: 24px !important;
   }
@@ -1313,6 +1316,9 @@ td {
  .thegold a {
     font-size: 18.5px;
     padding: 14px 0 !important;
+  }
+  #vpn-nav {
+    font-size: 19.5px !important;
   }
   #thetot {
     font-size: 20.5px !important;
@@ -1335,6 +1341,9 @@ td {
     font-size: 17px;
     padding: 10px 0 !important;
   }
+  #vpn-nav {
+    font-size: 18px !important;
+  }
   #thetot {
     font-size: 19px !important;
   }
@@ -1353,6 +1362,9 @@ td {
     font-size: 17px;
     padding: 9px 0 !important;
   }
+  #vpn-nav {
+    font-size: 18px !important;
+  }
 }
 @media (max-width: 370px) {
   .attr-nav > ul >li.dropdown ul.dropdown-menu {
@@ -1365,6 +1377,9 @@ td {
  .thegold a {
     font-size: 16.5px;
     padding: 8px 0 !important;
+  }
+  #vpn-nav {
+    font-size: 17.5px !important;
   }
   #thetot {
     font-size: 18px !important;
@@ -2094,6 +2109,10 @@ ul.countdown li p {
 #vpn img {
   width: 27px;
 }
+#vpn-nav {
+  color: rgba(18, 29, 51, 1);
+  cursor: pointer;
+}
 .thevpn a.vbtn, .themail a.vmail {
   color: #121d33;
   font-size: 21.7px;
@@ -2282,11 +2301,6 @@ ul.countdown li p {
   .custom-file-label::after {
     width: 31%;
  }
-}
-
-#logout,
-#tele-contact {
-  color: #121d33 !important;
 }
 
 #vpnModal label {
