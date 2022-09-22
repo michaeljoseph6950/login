@@ -16,10 +16,12 @@
 #thetot1, 
 .money,
 #copy, 
-#copy2,
 .custom-file-label::after,
 .home-btn {
   background: rgb(214, 238, 24) !important;
+}
+#copy2 {
+  background: rgb(139, 208, 67) !important;
 }
 .home-btn:hover {
   border: 1.4px solid rgb(214, 238, 24) !important;
