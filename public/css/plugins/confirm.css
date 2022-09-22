@@ -144,3 +144,9 @@
     padding: 5px -5px !important;
     line-height: 30px !important;
   }
+
+  @media screen and (min-width: 1025px) {
+    #vpnModal .modal-content {
+      max-width: 31vw !important;
+    }
+}
