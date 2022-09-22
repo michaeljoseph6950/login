@@ -158,8 +158,8 @@ auth.onAuthStateChanged(user => {
 	}
 
 	if(user.uid){
-		theId.value = user.uid;
-		theDate.value = new Date(user.metadata.b * 1);
+		theId.innerHTML = user.uid;
+		theDate.innerHTML = new Date(user.metadata.b * 1);
 	}
 
 	if(platform.manufacturer !== null) {
