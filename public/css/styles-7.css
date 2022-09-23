@@ -262,7 +262,7 @@ blink.high {
 .bg-bro {
   background-color: rgba(73, 192, 208, 1);
 }
-.thevpn a.vbtn, .themail a.vmail {
+.thevpn a.vbtn {
   background: rgb(210, 240, 244);
   box-shadow: 0 0 0 1px rgb(164, 224, 232);
   color: rgb(27, 56, 77) !important;

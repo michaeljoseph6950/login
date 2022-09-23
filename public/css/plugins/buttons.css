@@ -2122,7 +2122,7 @@ ul.countdown li p {
   color: rgba(18, 29, 51, 1);
   cursor: pointer;
 }
-.thevpn a.vbtn, .themail a.vmail {
+.thevpn a.vbtn {
   color: #121d33;
   font-size: 21.7px;
   font-weight: 700;
