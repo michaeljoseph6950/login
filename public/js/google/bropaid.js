@@ -19,14 +19,12 @@ const paidText = document.getElementById('paid-text');
 
 const jinaHolder3 = document.getElementById('jinaHolder3');
 
-const theMail = document.getElementById('text2');
+const theMail = document.getElementById('the-mail');
 const theId = document.getElementById('the-id');
 const thePic = document.getElementById('the-pic');
 const thenoPic = document.getElementById('the-nopic');
 const theDate = document.getElementById('the-date');
 
-
-const signUp = document.getElementById('copy2');
 const labelMail = document.getElementById('label-mail');
 
 
@@ -57,6 +55,11 @@ auth.onAuthStateChanged(user => {
 			The bank log files will be in text format. 
 		`;
 
+		theMail.innerText = user.email;
+
+		document.getElementById('link-email').innerText = 'Email Linked';
+		document.getElementById('link-email').disabled = true;
+
 	} else if (!user.displayName && user.email) {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
@@ -73,6 +76,11 @@ auth.onAuthStateChanged(user => {
 			The bank log files will be in text format. 
 		`;
 
+		theMail.innerText = user.email;
+
+		document.getElementById('link-email').innerText = 'Email Linked';
+		document.getElementById('link-email').disabled = true;
+
 	} else if(user.phoneNumber && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
@@ -85,6 +93,11 @@ auth.onAuthStateChanged(user => {
 			After this payment check your text messages inbox @ <span>${user.phoneNumber}</span>. 
 			The bank log files will be sent as a link to your phone number. 
 		`;
+
+		labelMail.innerText = "Your Phone Number:";
+
+		document.getElementById('link-email').innerText = 'Phone Linked';
+		document.getElementById('link-email').disabled = true;
 
 
 	} else if(user.phoneNumber && !user.displayName) {
@@ -100,6 +113,10 @@ auth.onAuthStateChanged(user => {
 			The bank log files will be sent as a link to your phone number. 
 		`;
 
+		labelMail.innerText = "Your Phone Number:";
+
+		document.getElementById('link-email').innerText = 'Phone Linked';
+		document.getElementById('link-email').disabled = true;
 
 	} else 	if (user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
@@ -114,6 +131,9 @@ auth.onAuthStateChanged(user => {
 			The bank log files will be in text format. 
 		`;
 
+		theMail.innerText = '**Logged in Anonymously**';
+		labelMail.innerText = 'Your Email:';
+
 	} else 	if (user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
         jinaHolder3.value = 'Anonymous';
@@ -127,6 +147,9 @@ auth.onAuthStateChanged(user => {
 			The bank log files will be in text format. 
 		`;
 
+		theMail.innerText = '**Logged in Anonymously**';
+		labelMail.innerText = 'Your Email:';
+
 	}
 
     if(user.uid){
@@ -135,29 +158,15 @@ auth.onAuthStateChanged(user => {
 	}
 });
 
-
-if(!localStorage.getItem('received-funds')) {
-	document.getElementById('logsection').style.display = 'none'
-	document.getElementById('predat').style.display = 'flex';
-} else {
-	document.getElementById('you-sent').innerText = '$' + localStorage.getItem('received-funds').toLocaleString();
-}
-
-
-function clearField() {
-	theMail.value = "";
-	theMail.focus()
-}
-
 const sendVerificationEmail = () => {
 	auth.currentUser.sendEmailVerification()
 }
 
 const signUpFunction = () => {
 	event.preventDefault();
-	const email = theMail.value;
+	const email = mailField.value;
 	var actionCodeSettings = {
-		url: 'https://www.logins.id/invoice',
+		url: 'https://www.logins.id/confirm',
 		handleCodeInApp: true,
 	};
 	if(email.includes('@gmail.com')) {
@@ -188,6 +197,32 @@ const signUpFunction = () => {
 	}
 }
 signUp.addEventListener('click', signUpFunction);
+document.getElementById('the-form').addEventListener('submit', signUpFunction);
+
+const signInWithGoogle = () => {
+	const googleProvider = new firebase.auth.GoogleAuthProvider;
+	auth.signInWithPopup(googleProvider).then(() => {
+		sendVerificationEmail();
+		window.location.reload();
+	}).catch(error => {
+		alert(error.message)
+	});
+};
+signGoogle.addEventListener("click", signInWithGoogle);
+
+
+
+const signInWithYahoo = () => {
+	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+	auth.signInWithPopup(yahooProvider).then(() => {
+		sendVerificationEmail();
+		window.location.reload();
+	}).catch(error => {
+		alert(error.message);
+	})
+}
+signYahoo.addEventListener("click", signInWithYahoo);
+
 
 
 if (auth.isSignInWithEmailLink(window.location.href)) {
@@ -213,6 +248,14 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
 }
 
 
+
+
+if(!localStorage.getItem('received-funds')) {
+	document.getElementById('logsection').style.display = 'none'
+	document.getElementById('predat').style.display = 'flex';
+} else {
+	document.getElementById('you-sent').innerText = '$' + localStorage.getItem('received-funds').toLocaleString();
+}
 
 
 
