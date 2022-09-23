@@ -235,3 +235,20 @@ section .dataTables_wrapper dataTables_length {
       max-width: 31vw !important;
     }
 }
+
+#jinaHolder3 {
+	position: absolute !important;
+	left: 25% !important;
+	right: 25% !important;
+	width: 50% !important;
+	box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.3) !important;
+	text-align: center !important;
+}
+
+@media screen and (max-width: 380px) {
+	#jinaHolder3 {
+		left: 27% !important;
+		right: 27% !important;
+		width: 46% !important;
+	}
+}
