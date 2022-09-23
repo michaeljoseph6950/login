@@ -13,8 +13,6 @@
 .butn.in-cart,
 #tele-link,
 #cartlength,
-#thetot1, 
-.money,
 #copy, 
 .custom-file-label::after,
 .home-btn {
@@ -264,6 +262,8 @@ blink.high {
 .bg-bro {
   background-color: rgba(0, 115, 173, 1);
 }
+#thetot1, 
+.money,
 .thevpn a.vbtn {
   background: rgb(192, 220, 235);
   box-shadow: 0 0 0 1px rgb(128, 185, 214);
