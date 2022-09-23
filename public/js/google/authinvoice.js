@@ -17,16 +17,19 @@ const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
 const jinaHolder3 = document.getElementById('jinaHolder3');
 
-const theMail = document.getElementById('text2');
+const theMail = document.getElementById('the-mail');
 const theId = document.getElementById('the-id');
 const thePic = document.getElementById('the-pic');
 const thenoPic = document.getElementById('the-nopic');
 const theDate = document.getElementById('the-date');
 
-
-const signUp = document.getElementById('copy2');
 const labelMail = document.getElementById('label-mail');
 
+const mailField = document.getElementById('exampleInputEmail');
+const signUp = document.getElementById('signUp');
+
+const signGoogle = document.getElementById("signGoogle");
+const signYahoo = document.getElementById('signYahoo');
 
 if(!window.location.href.includes('ogins')){
 	if(!window.location.href.includes('5500')) {
@@ -53,11 +56,7 @@ auth.onAuthStateChanged(user => {
 		jinaHolder3.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
-		theMail.value = user.email;
-
-		theMail.style.width = '100%';
-		signUp.style.display = 'none';
-		theMail.readOnly = true;
+		theMail.innerText = user.email;
 	} else if (!user.displayName && user.email) {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
@@ -66,43 +65,35 @@ auth.onAuthStateChanged(user => {
 		jinaHolder3.value = theaddress;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
-		theMail.value = user.email;
-
-		theMail.style.width = '100%';
-		signUp.style.display = 'none';
-		theMail.readOnly = true;
+		theMail.innerText = user.email;
 	} else if(user.phoneNumber && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = user.displayName;
-		theMail.value = user.phoneNumber;
+		theMail.innerText = user.phoneNumber;
 		labelMail.innerText = "Your Phone Number:";
 
-		theMail.style.width = '100%';
-		signUp.style.display = 'none';
-		theMail.readOnly = true;
 	}  else if(user.phoneNumber && !user.displayName) {
 		jinaHolder.value = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = user.phoneNumber;
-		theMail.value = user.phoneNumber;
+		theMail.innerText = user.phoneNumber;
 		labelMail.innerText = "Your Phone Number:";
 
-		theMail.style.width = '100%';
-		signUp.style.display = 'none';
-		theMail.readOnly = true;
 	} else if(user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder3.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
-		theMail.addEventListener('click', clearField);
+		theMail.innerText = '**Logged in Anonymously**';
+		labelMail.innerText = 'Your Email:';
 	} else if(user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder3.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
-		theMail.addEventListener('click', clearField);
+		theMail.innerText = '**Logged in Anonymously**';
+		labelMail.innerText = 'Your Email:';
 	} 
 
 	if(user.uid){
@@ -112,19 +103,13 @@ auth.onAuthStateChanged(user => {
 
 });
 
-
-function clearField() {
-	theMail.value = "";
-	theMail.focus()
-}
-
 const sendVerificationEmail = () => {
 	auth.currentUser.sendEmailVerification()
 }
 
 const signUpFunction = () => {
 	event.preventDefault();
-	const email = theMail.value;
+	const email = mailField.value;
 	var actionCodeSettings = {
 		url: 'https://www.logins.id/invoice',
 		handleCodeInApp: true,
@@ -157,6 +142,32 @@ const signUpFunction = () => {
 	}
 }
 signUp.addEventListener('click', signUpFunction);
+document.getElementById('the-form').addEventListener('submit', signUpFunction);
+
+const signInWithGoogle = () => {
+	const googleProvider = new firebase.auth.GoogleAuthProvider;
+	auth.signInWithPopup(googleProvider).then(() => {
+		sendVerificationEmail();
+		window.location.reload();
+	}).catch(error => {
+		alert(error.message)
+	});
+};
+signGoogle.addEventListener("click", signInWithGoogle);
+
+
+
+const signInWithYahoo = () => {
+	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+	auth.signInWithPopup(yahooProvider).then(() => {
+		sendVerificationEmail();
+		window.location.reload();
+	}).catch(error => {
+		alert(error.message);
+	})
+}
+signYahoo.addEventListener("click", signInWithYahoo);
+
 
 
 if (auth.isSignInWithEmailLink(window.location.href)) {
@@ -180,7 +191,6 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
 			console.log('Wrong email entered')
 		});
 }
-
 
 
 
