@@ -1892,6 +1892,8 @@ td {
   left: 27%;
   right: 27%;
   opacity: 0.85 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 #canvas2 {
   border-radius: 50%;

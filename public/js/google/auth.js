@@ -53,9 +53,9 @@ auth.onAuthStateChanged(user => {
 
 		theMail.innerText = user.email;
 
-		theMail.style.width = '100%';
-		signUp.style.display = 'none';
-		theMail.readOnly = true;
+		document.getElementById('link-email').innerText = 'Email Linked';
+		document.getElementById('link-email').disabled = true;
+
 	} else if (!user.displayName && user.email) {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
@@ -66,9 +66,9 @@ auth.onAuthStateChanged(user => {
 
 		theMail.innerText = user.email;
 
-		theMail.style.width = '100%';
-		signUp.style.display = 'none';
-		theMail.readOnly = true;
+		document.getElementById('link-email').innerText = 'Email Linked';
+		document.getElementById('link-email').disabled = true;
+
 	} else if(user.phoneNumber && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
@@ -76,15 +76,18 @@ auth.onAuthStateChanged(user => {
 		theMail.innerText = user.phoneNumber;
 		labelMail.innerText = "Your Phone Number:";
 
-		theMail.style.width = '100%';
-		signUp.style.display = 'none';
-		theMail.readOnly = true;
+		document.getElementById('link-email').innerText = 'Phone Linked';
+		document.getElementById('link-email').disabled = true;
+
 	}  else if(user.phoneNumber && !user.displayName) {
 		jinaHolder.value = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = user.phoneNumber;
 		theMail.innerText = user.phoneNumber;
 		labelMail.innerText = "Your Phone Number:";
+
+		document.getElementById('link-email').innerText = 'Phone Linked';
+		document.getElementById('link-email').disabled = true;
 	} else if(user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder3.value = user.displayName;
