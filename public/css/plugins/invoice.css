@@ -27,18 +27,15 @@
         margin-top: 78px;
     }
 }
-#predat,
-#anon-login {
+#predat {
     display: none;
     padding: 3px;
     height: 100vh;
 }
-#predat div,
-#anon-login div {
+#predat div {
     overflow-y: hidden !important;
 }
-#predat .section-heading h4,
-#anon-login .section-heading h4 {
+#predat .section-heading h4 {
     color: #121d33;
 }
 .butn.home-btn{

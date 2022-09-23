@@ -135,9 +135,12 @@ auth.onAuthStateChanged(user => {
 	}
 });
 
-document.getElementById('you-sent').innerText = '$' + localStorage.getItem('received-funds').toLocaleString();
-
-
+if(!localStorage.getItem('received-funds')) {
+	document.getElementById('logsection').style.display = 'none'
+	document.getElementById('predat').style.display = 'flex';
+} else {
+	document.getElementById('you-sent').innerText = '$' + localStorage.getItem('received-funds').toLocaleString();
+}
 
 
 function clearField() {
