@@ -1877,13 +1877,13 @@ td {
   color: rgba(255, 255, 255, 0.85);
   text-transform: uppercase !important;
   background-color: transparent !important;
-  margin-left: 10% !important;
+  margin-left: 0 !important;
   font-size: 25px;
-  text-align: center !important;
+  text-align: left !important;
   border-radius: 0 !important;
   background: rgba(18, 29, 51, 0.1) !important;
-  border: 0.7px solid rgba(18, 29, 51, 0.3) !important;
-  box-shadow: 0 1px 3px 0 rgba(18, 29, 51, 0.7) !important;
+  border: 0.7px solid rgba(18, 29, 51, 0.1) !important;
+  box-shadow: 0 1px 3px 0 rgba(18, 29, 51, 0.3) !important;
 }
 #link-email {
   position: absolute;
