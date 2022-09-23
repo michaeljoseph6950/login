@@ -1868,7 +1868,7 @@ td {
   float: left !important;
 }
 #jinaHolder3 {
-  margin: 3px !important;
+  margin: 5px !important;
   width: 70% !important;
   font-weight: 700;
   overflow-x: scroll !important;
@@ -1877,34 +1877,21 @@ td {
   color: rgba(255, 255, 255, 0.85);
   text-transform: uppercase !important;
   background-color: transparent !important;
-  border: none !important;
+  margin-left: 10% !important;
   font-size: 25px;
-  text-align: left !important;
+  text-align: center !important;
   border-radius: 0 !important;
-  border: 0.7px solid rgba(18, 29, 51, 0.1) !important;
-  box-shadow: 0 1px 3px 0 rgba(18, 29, 51, 0.28) !important;
+  background: rgba(18, 29, 51, 0.1) !important;
+  border: 0.7px solid rgba(18, 29, 51, 0.3) !important;
+  box-shadow: 0 1px 3px 0 rgba(18, 29, 51, 0.7) !important;
 }
-@media screen and (max-width: 375px) {
-  #jinaHolder3 {
-    right: 27% !important;
-    left: 27 !important;
-    width: 46% !important;
-  }
-}
-@media screen and (max-width: 370px) {
-  #jinaHolder3 {
-    right: 29% !important;
-    left: 29% !important;
-    width: 42% !important;
-    font-size: 21px !important;
-  }
-}
-#more-actions {
+#sign-out {
   position: absolute;
   white-space: nowrap;
   top: 21%;
   left: 30%;
   right: 30%;
+  opacity: 0.57 !important;
 }
 #canvas2 {
   border-radius: 50%;
