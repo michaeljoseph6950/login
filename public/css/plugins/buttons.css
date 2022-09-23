@@ -1891,7 +1891,7 @@ td {
   top: 21%;
   left: 27%;
   right: 27%;
-  opacity: 1 !important;
+  opacity: 0.85 !important;
 }
 #canvas2 {
   border-radius: 50%;

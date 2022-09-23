@@ -818,6 +818,7 @@
     <i class="fas fa-angle-up"></i>
 </a>
 
+
 <div class="modal fade" id="vpnModal" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">        
         <div class="modal-content">
@@ -828,20 +829,17 @@
             <div class="modal-body" style="border-bottom: none !important">
                 <div class="flexing">
                     <img style="display: none;" id="the-pic">
-                    <button class="butn" id="sign-out">
-                        Sign Out
+                    <button class="butn" id="link-email" data-bs-toggle="modal" data-bs-target="#acModal">
+                        Link Email
                     </button>
-                    <img style="display: none;" src="img/logos/logo2.png" id="the-nopic">
+                    <img style="display: none;" src="img/logos/logo7.png" id="the-nopic">
                     <canvas id="canvas2" width="70px" height="70px"></canvas>
                 </div>
             </div>
             <div class="modal-body">
-                <label id="label-mail">Your Email:</label>
-                <div class="change-div2">
-                    <input type="email" class="form-control" value="Enter your email..." id="text2">
-                    <button class="butn" id="copy2">     
-                        Verify <i class="fas fa-user-check"></i>
-                    </button>
+                <div>
+                    <label id="label-mail">Your Email:</label>
+                    <p id="the-mail"></p>
                 </div>
                 <div>
                     <label>Your User ID:</label>
@@ -862,6 +860,106 @@
         </div>
     </div>   
 </div>
+
+
+<div class="modal fade"  id="acModal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="section-heading">
+                    <h4>
+                        Link Email Address
+                    </h4>
+                </div>
+                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body vpn-modal">
+                <p>
+                    Pro tip: Use a <span>proton mail</span> 
+                    account or a <span>burner email</span> 
+                    to login on the site.
+                </p>
+            </div>
+            <div class="modal-body">
+                <li class="thevpn">
+                    <img src="img/partners/google.png">
+                    <a class="butn vbtn" id="signGoogle">
+                        Google Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+
+                <li class="thevpn">
+                    <img src="img/partners/mail.png">
+                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        iCloud Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+
+
+                <li class="thevpn">
+                    <img src="img/partners/outlook.png">
+                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Outlook Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+
+                <li class="thevpn">
+                    <img src="img/partners/protonmail.png">
+                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Proton Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+
+                <li class="thevpn">
+                    <img src="img/partners/yah.png">
+                    <a class="butn vbtn" id="signYahoo">
+                        Yahoo Mail
+                    </a>
+                </li>
+            </div>
+
+        </div>
+    </div>   
+</div>
+
+<div class="modal fade"  id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="section-heading">
+                    <h4>
+                        Link Email Address
+                    </h4>
+                </div>
+                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-p" id="modal-ps">
+                    A link will be sent to the email you input below 👇🏼👇🏼.
+                    <br>
+                    Click on that link to login to the website.
+                    <br>
+                </p>
+                <form id="the-form">
+                    <div class="form-group col-md-12">
+                        <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter Your Email..." required>
+                    </div>
+                    <li class="next">
+                        <button type="submit" class="butn home-btn" id="signUp">
+                            Get Verification Link
+                            <img src="img/partners/check.png">
+                        </button>
+                    </li>
+                </form>
+            </div>
+        </div>
+    </div>   
+</div>
+
 
 
 
