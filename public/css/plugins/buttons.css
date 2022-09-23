@@ -1868,25 +1868,21 @@ td {
   float: left !important;
 }
 #jinaHolder3 {
-  margin-top: 10px !important;
-  position: absolute !important;
-  right: 25% !important;
-  left: 25% !important;
-  width: 50% !important;
+  margin: 3px !important;
+  width: 70% !important;
   font-weight: 700;
   overflow-x: scroll !important;
   overflow-y: hidden !important;
   white-space: nowrap !important;
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   text-transform: uppercase !important;
   background-color: transparent !important;
-  font-size: 22px;
-  text-align: center !important;
+  border: none !important;
+  font-size: 25px;
+  text-align: left !important;
   border-radius: 0 !important;
-  border: 1.4px solid rgba(255, 255, 255, 0.03) !important;
-  box-shadow: 0 1px 3px 0 #121d33 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  border: 0.7px solid rgba(18, 29, 51, 0.1) !important;
+  box-shadow: 0 1px 3px 0 rgba(18, 29, 51, 0.28) !important;
 }
 @media screen and (max-width: 375px) {
   #jinaHolder3 {
@@ -1902,6 +1898,13 @@ td {
     width: 42% !important;
     font-size: 21px !important;
   }
+}
+#more-actions {
+  position: absolute;
+  white-space: nowrap;
+  top: 21%;
+  left: 25%;
+  right: 25%;
 }
 #canvas2 {
   border-radius: 50%;
