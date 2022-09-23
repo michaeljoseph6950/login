@@ -138,11 +138,11 @@ body {
 @media screen and (min-width: 996px) {
   .port {
     border-radius: 0;
-    width: 90% !important;
-    margin: 15px 5% !important;
+    width: 85% !important;
+    margin: 10px 7.5% 30px !important;
   }
   .port a img {
-    height: 180px;
+    height: 175px;
   }
 }
 @media screen and (max-width: 996px) {
