@@ -19,7 +19,8 @@
     font-size: 24px;
     line-height: 35px;
     white-space: nowrap !important;
-    padding: 10px 15px;
+    padding: 9.5px 14px;
+    box-shadow: 1px 1px 3px 1px rgba(18, 29, 51, 0.28) !important;
 }
 @media screen and (max-width: 390px) {
     .butn.home-btn,
