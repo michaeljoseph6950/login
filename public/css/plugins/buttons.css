@@ -1881,7 +1881,7 @@ td {
   font-size: 25px;
   text-align: left !important;
   border-radius: 0 !important;
-  background: rgba(18, 29, 51, 0.1) !important;
+  background: rgba(18, 29, 51, 0.05) !important;
   border: 0.7px solid rgba(18, 29, 51, 0.1) !important;
   box-shadow: 0 1px 3px 0 rgba(18, 29, 51, 0.3) !important;
 }
