@@ -1885,7 +1885,7 @@ td {
   border: 0.7px solid rgba(18, 29, 51, 0.1) !important;
   box-shadow: 0 1px 3px 0 rgba(18, 29, 51, 0.3) !important;
 }
-#vpn-to-use {
+#more-actions {
   position: absolute;
   white-space: nowrap;
   top: 21%;
