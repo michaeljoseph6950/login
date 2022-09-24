@@ -57,9 +57,6 @@ auth.onAuthStateChanged(user => {
 
 		theMail.innerText = user.email;
 
-		document.getElementById('link-email').innerText = 'Email Linked';
-		document.getElementById('link-email').disabled = true;
-
 	} else if (!user.displayName && user.email) {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
@@ -78,9 +75,6 @@ auth.onAuthStateChanged(user => {
 
 		theMail.innerText = user.email;
 
-		document.getElementById('link-email').innerText = 'Email Linked';
-		document.getElementById('link-email').disabled = true;
-
 	} else if(user.phoneNumber && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
@@ -95,9 +89,6 @@ auth.onAuthStateChanged(user => {
 		`;
 
 		labelMail.innerText = "Your Phone Number:";
-
-		document.getElementById('link-email').innerText = 'Phone Linked';
-		document.getElementById('link-email').disabled = true;
 
 
 	} else if(user.phoneNumber && !user.displayName) {
@@ -114,9 +105,6 @@ auth.onAuthStateChanged(user => {
 		`;
 
 		labelMail.innerText = "Your Phone Number:";
-
-		document.getElementById('link-email').innerText = 'Phone Linked';
-		document.getElementById('link-email').disabled = true;
 
 	} else 	if (user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
@@ -157,96 +145,6 @@ auth.onAuthStateChanged(user => {
 		theDate.innerHTML = new Date(user.metadata.b * 1);
 	}
 });
-
-const sendVerificationEmail = () => {
-	auth.currentUser.sendEmailVerification()
-}
-
-const signUpFunction = () => {
-	event.preventDefault();
-	const email = mailField.value;
-	var actionCodeSettings = {
-		url: 'https://www.logins.id/confirm',
-		handleCodeInApp: true,
-	};
-	if(email.includes('@gmail.com')) {
-		const googleProvider = new firebase.auth.GoogleAuthProvider;
-		auth.signInWithPopup(googleProvider).then(() => {
-			sendVerificationEmail();
-			window.location.reload();
-		}).catch(error => {
-			alert(error.message)
-		});
-	} else if(email.includes('@yahoo.com')) {
-		const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
-		auth.signInWithPopup(yahooProvider).then(() => {
-			sendVerificationEmail();
-			window.location.reload();
-		}).catch(error => {
-			alert(error.message);
-		})
-	} else {
-		auth.sendSignInLinkToEmail(email, actionCodeSettings)
-		.then(() => {
-			alert('Verification link sent to your email ' + email + " check the spam / junk folder");
-			window.localStorage.setItem('emailForSignIn', email);
-		})
-		.catch(error => {
-			alert(error.message);
-		});
-	}
-}
-signUp.addEventListener('click', signUpFunction);
-document.getElementById('the-form').addEventListener('submit', signUpFunction);
-
-const signInWithGoogle = () => {
-	const googleProvider = new firebase.auth.GoogleAuthProvider;
-	auth.signInWithPopup(googleProvider).then(() => {
-		sendVerificationEmail();
-		window.location.reload();
-	}).catch(error => {
-		alert(error.message)
-	});
-};
-signGoogle.addEventListener("click", signInWithGoogle);
-
-
-
-const signInWithYahoo = () => {
-	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
-	auth.signInWithPopup(yahooProvider).then(() => {
-		sendVerificationEmail();
-		window.location.reload();
-	}).catch(error => {
-		alert(error.message);
-	})
-}
-signYahoo.addEventListener("click", signInWithYahoo);
-
-
-
-if (auth.isSignInWithEmailLink(window.location.href)) {
-	var email = window.localStorage.getItem('emailForSignIn');
-	if (!email) {
-		localStorage.setItem('the-email', true)
-		email = window.prompt('Enter your email for confirmation');
-	}
-	auth.signInWithEmailLink(email, window.location.href)
-		.then((result) => {
-			if (localStorage.getItem('the-email')) {
-				sendVerificationEmail();
-				window.location.reload();
-			} else {
-				alert('Return to previous tab, email has been confirmed');
-				sendVerificationEmail();
-				window.close();
-			}
-		})
-		.catch((error) => {
-			console.log('Wrong email entered')
-		});
-}
-
 
 
 
