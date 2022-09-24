@@ -1849,12 +1849,13 @@ td {
   box-shadow:  0 1px 3px 0 #121d33 !important;
   border-radius: 0 !important;
 }
-#the-date, #the-ip {
+#the-date, #the-ip, #the-id {
   white-space: nowrap !important;
   overflow-x: scroll !important;
 }
 #the-date::-webkit-scrollbar, 
-#the-ip::-webkit-scrollbar {
+#the-ip::-webkit-scrollbar,
+#the-id::-webkit-scrollbar {
   height: 3px !important;
 }
 
